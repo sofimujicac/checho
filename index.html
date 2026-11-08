@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checho Kine · Kinesiología Deportiva</title>
+  <meta name="description" content="Kinesiología deportiva: recuperación de lesiones, prevención y rendimiento. Agenda tu hora en menos de un minuto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --text: #f4f7ff;
+      --muted: rgba(244, 247, 255, .7);
+      --glass: rgba(255, 255, 255, .08);
+      --glass-strong: rgba(255, 255, 255, .14);
+      --border: rgba(255, 255, 255, .22);
+      --accent: #3cf0c5;
+      --accent-2: #4f8bff;
+      --radius: 28px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    /* Manchas de color animadas detrás del vidrio */
+    .blobs { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
+    .blob {
+      position: absolute; border-radius: 50%; filter: blur(80px); opacity: .55;
+      animation: float 18s ease-in-out infinite alternate;
+    }
+    .b1 { width: 520px; height: 520px; background: var(--accent); top: -120px; left: -120px; }
+    .b2 { width: 600px; height: 600px; background: var(--accent-2); bottom: -200px; right: -160px; animation-delay: -6s; }
+    .b3 { width: 380px; height: 380px; background: #b45cff; top: 40%; left: 45%; animation-delay: -12s; }
+    @keyframes float {
+      to { transform: translate(80px, -60px) scale(1.15); }
+    }
+
+    /* Vidrio líquido */
+    .glass {
+      background: linear-gradient(135deg, var(--glass-strong), var(--glass));
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 20px 60px rgba(0,0,0,.35);
+    }
+
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 12px; z-index: 10;
+      margin: 12px auto 0; max-width: 1120px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 10px 10px 22px; border-radius: 999px;
+    }
+    .logo { font-weight: 800; letter-spacing: -.02em; }
+    .logo span { color: var(--accent); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      border: 0; cursor: pointer; text-decoration: none; font: inherit; font-weight: 600;
+      padding: 14px 26px; border-radius: 999px;
+      color: #06121a;
+      background: linear-gradient(135deg, var(--accent), #8cffe3);
+      box-shadow: 0 8px 30px rgba(60, 240, 197, .45), inset 0 1px 0 rgba(255,255,255,.6);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .btn:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 12px 40px rgba(60,240,197,.6); }
+    .btn.sm { padding: 10px 18px; }
+
+    /* Hero */
+    .hero {
+      display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center;
+      padding: 72px 0 56px;
+    }
+    .pill {
+      display: inline-block; padding: 6px 14px; border-radius: 999px; font-size: .85rem;
+      color: var(--accent); margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(2.3rem, 6vw, 4.2rem); line-height: 1.05; letter-spacing: -.03em; font-weight: 800;
+    }
+    h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .lead { color: var(--muted); font-size: 1.15rem; margin: 18px 0 28px; max-width: 46ch; }
+    .proof { display: flex; gap: 24px; margin-top: 28px; flex-wrap: wrap; }
+    .proof strong { display: block; font-size: 1.6rem; }
+    .proof small { color: var(--muted); }
+
+    /* Formulario de agenda */
+    .booking { padding: 28px; }
+    .booking h2 { font-size: 1.4rem; margin-bottom: 4px; }
+    .booking p { color: var(--muted); font-size: .95rem; margin-bottom: 20px; }
+    .label { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 16px 0 8px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip input { display: none; }
+    .chip span {
+      display: inline-block; padding: 9px 14px; border-radius: 999px; cursor: pointer; font-size: .92rem;
+      background: rgba(255,255,255,.08); border: 1px solid var(--border); transition: all .15s;
+    }
+    .chip input:checked + span {
+      background: var(--accent); color: #06121a; border-color: transparent; font-weight: 600;
+    }
+    .field {
+      width: 100%; padding: 13px 16px; border-radius: 16px; font: inherit; color: var(--text);
+      background: rgba(255,255,255,.08); border: 1px solid var(--border); outline: none;
+    }
+    .field:focus { border-color: var(--accent); }
+    .field::placeholder { color: rgba(244,247,255,.45); }
+    .booking .btn { width: 100%; margin-top: 22px; }
+    .fine { text-align: center; font-size: .8rem; color: var(--muted); margin-top: 10px; }
+
+    /* Secciones */
+    section { padding: 48px 0; }
+    .section-title { font-size: clamp(1.6rem, 4vw, 2.4rem); letter-spacing: -.02em; margin-bottom: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { padding: 26px; }
+    .card .ico { font-size: 1.8rem; margin-bottom: 10px; }
+    .card h3 { margin-bottom: 6px; }
+    .card p { color: var(--muted); font-size: .95rem; }
+
+    .steps { counter-reset: s; }
+    .steps .card::before {
+      counter-increment: s; content: counter(s);
+      display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%;
+      background: var(--accent); color: #06121a; font-weight: 800; margin-bottom: 12px;
+    }
+
+    .cta-final { text-align: center; padding: 48px 24px; }
+    .cta-final p { color: var(--muted); margin: 10px 0 24px; }
+
+    footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 40px 0 120px; }
+
+    /* Barra fija de agenda en móvil */
+    .sticky-cta {
+      display: none; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 20;
+      padding: 10px; border-radius: 999px; align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .sticky-cta span { padding-left: 12px; font-size: .9rem; font-weight: 600; }
+
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; padding-top: 40px; }
+      .grid { grid-template-columns: 1fr; }
+      .sticky-cta { display: flex; }
+      nav .btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="blobs"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+  <nav class="glass">
+    <div class="logo">Checho<span>Kine</span></div>
+    <a href="#agendar" class="btn sm">Agendar hora</a>
+  </nav>
+
+  <main class="wrap">
+    <!-- HERO + AGENDA -->
+    <div class="hero">
+      <div>
+        <div class="pill glass">⚡ Horas disponibles esta semana</div>
+        <h1>Vuelve a entrenar <em>sin dolor</em>, más rápido.</h1>
+        <p class="lead">Kinesiología deportiva para lesiones, prevención y rendimiento. Evaluación en tu primera sesión y un plan pensado para tu deporte.</p>
+        <a href="#agendar" class="btn">Agenda en 30 segundos →</a>
+        <div class="proof">
+          <div><strong>+1.200</strong><small>deportistas atendidos</small></div>
+          <div><strong>4.9 ★</strong><small>valoración promedio</small></div>
+          <div><strong>24 h</strong><small>para tu primera hora</small></div>
+        </div>
+      </div>
+
+      <form id="agendar" class="booking glass" onsubmit="agendar(event)">
+        <h2>Reserva tu hora</h2>
+        <p>Tres pasos y listo. Te confirmamos por WhatsApp.</p>
+
+        <div class="label">1 · ¿Qué necesitas?</div>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="servicio" value="Lesión" checked><span>🩹 Lesión</span></label>
+          <label class="chip"><input type="radio" name="servicio" value="Prevención"><span>🛡️ Prevención</span></label>
+          <label class="chip"><input type="radio" name="servicio" value="Rendimiento"><span>🚀 Rendimiento</span></label>
+          <label class="chip"><input type="radio" name="servicio" value="Post-operatorio"><span>🏥 Post-op</span></label>
+        </div>
+
+        <div class="label">2 · ¿Cuándo?</div>
+        <div class="chips" id="dias"></div>
+        <div class="chips" style="margin-top:8px">
+          <label class="chip"><input type="radio" name="bloque" value="Mañana" checked><span>☀️ Mañana</span></label>
+          <label class="chip"><input type="radio" name="bloque" value="Tarde"><span>🌤️ Tarde</span></label>
+          <label class="chip"><input type="radio" name="bloque" value="Noche"><span>🌙 Noche</span></label>
+        </div>
+
+        <div class="label">3 · Tus datos</div>
+        <input class="field" name="nombre" placeholder="Tu nombre" required>
+
+        <button class="btn" type="submit">Confirmar por WhatsApp</button>
+        <div class="fine">Sin pago previo · Cancela gratis hasta 12 h antes</div>
+      </form>
+    </div>
+
+    <!-- SERVICIOS -->
+    <section>
+      <h2 class="section-title">¿En qué te ayudamos?</h2>
+      <div class="grid">
+        <div class="card glass"><div class="ico">🦵</div><h3>Recuperación de lesiones</h3><p>Esguinces, desgarros, tendinopatías y dolor articular. Volver a la cancha con seguridad.</p></div>
+        <div class="card glass"><div class="ico">🏃</div><h3>Prevención</h3><p>Evaluación de movimiento y fuerza para detectar riesgos antes de que se transformen en lesión.</p></div>
+        <div class="card glass"><div class="ico">📈</div><h3>Rendimiento</h3><p>Movilidad, fuerza y readaptación para que rindas al máximo en tu deporte.</p></div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section>
+      <h2 class="section-title">Así de simple</h2>
+      <div class="grid steps">
+        <div class="card glass"><h3>Agenda</h3><p>Elige servicio y horario. Te toma menos de un minuto.</p></div>
+        <div class="card glass"><h3>Evaluación</h3><p>En la primera sesión revisamos tu lesión, tu deporte y tus objetivos.</p></div>
+        <div class="card glass"><h3>Tu plan</h3><p>Tratamiento y ejercicios a tu medida, con seguimiento en cada sesión.</p></div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section>
+      <div class="cta-final glass">
+        <h2 class="section-title" style="margin:0">¿Listo para volver a moverte?</h2>
+        <p>Tu primera hora puede ser mañana mismo.</p>
+        <a href="#agendar" class="btn">Agendar mi hora</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© Checho Kine · Kinesiología Deportiva</footer>
+
+  <div class="sticky-cta glass">
+    <span>Horas desde mañana</span>
+    <a href="#agendar" class="btn sm">Agendar</a>
+  </div>
+
+  <script>
+    // Número de WhatsApp de la clínica (reemplazar por el real, formato internacional sin +)
+    const WHATSAPP = "56900000000";
+
+    // Genera los próximos 5 días hábiles como opciones
+    const dias = document.getElementById("dias");
+    const nombres = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+    let d = new Date(), n = 0;
+    while (n < 5) {
+      d.setDate(d.getDate() + 1);
+      if (d.getDay() === 0) continue;
+      const txt = `${nombres[d.getDay()]} ${d.getDate()}`;
+      dias.insertAdjacentHTML("beforeend",
+        `<label class="chip"><input type="radio" name="dia" value="${txt}" ${n === 0 ? "checked" : ""}><span>${txt}</span></label>`);
+      n++;
+    }
+
+    function agendar(e) {
+      e.preventDefault();
+      const f = new FormData(e.target);
+      const msg = `Hola! Soy ${f.get("nombre")}. Quiero agendar una hora de ${f.get("servicio")} para el ${f.get("dia")} en la ${f.get("bloque").toLowerCase()}.`;
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
+    }
+  </script>
+</body>
+</html>
