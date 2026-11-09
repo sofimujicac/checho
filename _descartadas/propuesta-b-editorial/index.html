@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sergio Trigo · Kinesiólogo Deportivo | Reintegro deportivo en Santiago</title>
+  <meta name="description" content="Kinesiología deportiva y reintegro deportivo con Sergio Trigo. Atención de élite para todos: vuelve a tu deporte sin miedo a recaer. Agenda tu hora en 30 segundos.">
+  <link rel="canonical" href="https://kinetraumadeportivo.cl/">
+  <meta property="og:title" content="Kinetrauma Deportivo · Sergio Trigo">
+  <meta property="og:description" content="Atención de élite para todos. No tienes que ser profesional para que te traten como uno.">
+  <meta property="og:image" content="https://kinetraumadeportivo.cl/og-sergio.jpg">
+  <meta property="og:url" content="https://kinetraumadeportivo.cl/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta name="theme-color" content="#0F3D3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physiotherapy",
+    "name": "Kinetrauma Deportivo – Sergio Trigo",
+    "url": "https://kinetraumadeportivo.cl/",
+    "image": "https://kinetraumadeportivo.cl/sergio.jpg",
+    "telephone": "+56900000000",
+    "priceRange": "$$",
+    "address": { "@type": "PostalAddress", "addressLocality": "Santiago", "addressRegion": "Región Metropolitana", "addressCountry": "CL" },
+    "founder": { "@type": "Person", "name": "Sergio Trigo", "jobTitle": "Kinesiólogo deportivo, especialista en reintegro deportivo" },
+    "medicalSpecialty": "SportsMedicine"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0A0F14;
+      --deep: #0F3D3E;
+      --teal: #2E6F73;
+      --aqua: #7FB3B8;
+      --sand: #EADCC8;
+      --sand-lt: #F4EDE3; /* tinte claro de #EADCC8 */
+      --ember: #C6601F;
+      --muted: #4a5a5c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Montserrat", system-ui, sans-serif; background: var(--sand-lt); color: var(--ink); line-height: 1.55; overflow-x: hidden; }
+    a { color: inherit; }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 16px; }
+
+    .ph { background: rgba(198,96,31,.14); border: 1px dashed var(--ember); border-radius: 4px; padding: 0 6px; color: var(--ember); white-space: nowrap; font-weight: 600; }
+
+    /* Header */
+    header { position: sticky; top: 0; z-index: 30; background: rgba(15, 61, 62, .96); backdrop-filter: blur(10px); color: var(--sand); }
+    .bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 72px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .mark { width: 38px; height: 38px; display: grid; place-items: center; font-weight: 900; font-size: .9rem; color: var(--deep); background: var(--sand); clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%); }
+    .brand b { font-weight: 900; letter-spacing: .02em; text-transform: uppercase; font-size: .9rem; line-height: 1.1; }
+    .brand small { display: block; font-size: .68rem; font-weight: 500; color: var(--aqua); text-transform: none; letter-spacing: 0; }
+    nav { display: flex; gap: 28px; font-size: .85rem; font-weight: 600; }
+    nav a { text-decoration: none; opacity: .85; }
+    nav a:hover { opacity: 1; color: var(--aqua); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 12px; font: inherit; font-weight: 800; font-size: 1rem;
+      text-transform: uppercase; letter-spacing: .04em; text-decoration: none; cursor: pointer;
+      padding: 16px 26px; border: 0; color: #fff; background: var(--ember);
+      transition: transform .2s, background .2s;
+    }
+    .btn:hover { background: #ad521a; transform: translateY(-2px); }
+    .btn.sm { padding: 12px 18px; font-size: .82rem; }
+    .btn.line { background: transparent; border: 2px solid currentColor; color: var(--sand); }
+
+    /* Hero diagonal */
+    .hero { position: relative; background: var(--deep); color: var(--sand); clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%); padding-bottom: 150px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding-top: 60px; }
+    .tagline { display: inline-block; font-size: .75rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--aqua); border-left: 4px solid var(--ember); padding-left: 12px; margin-bottom: 22px; }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); font-weight: 900; line-height: .98; text-transform: uppercase; letter-spacing: -.02em; }
+    h1 span { color: var(--aqua); }
+    .sub { font-size: 1.1rem; margin: 22px 0 30px; max-width: 46ch; color: rgba(234,220,200,.85); }
+    .sub b { color: var(--sand); }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .collage { position: relative; height: 480px; }
+    .img { position: absolute; display: grid; place-items: center; text-align: center; font-size: .8rem; font-weight: 600; color: var(--sand);
+      background: repeating-linear-gradient(135deg, rgba(234,220,200,.05) 0 12px, transparent 12px 24px), linear-gradient(160deg, var(--teal), var(--deep)); }
+    .img span { background: rgba(10,15,20,.55); padding: 8px 12px; border: 1px dashed rgba(234,220,200,.4); max-width: 80%; }
+    .img.main { inset: 0 0 60px 60px; clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%); }
+    .img.s1 { width: 170px; height: 150px; left: 0; bottom: 20px; border: 6px solid var(--sand-lt); }
+    .quote-card { position: absolute; right: 20px; bottom: 0; width: 280px; background: var(--sand-lt); color: var(--ink); padding: 22px; box-shadow: 0 20px 50px rgba(0,0,0,.3); font-size: .9rem; }
+    .quote-card p { font-style: italic; margin-bottom: 10px; }
+    .quote-card small { color: var(--teal); font-weight: 700; }
+
+    /* Barra de reserva estilo buscador */
+    .booking-wrap { position: relative; z-index: 5; margin-top: -110px; }
+    .booking { background: var(--sand-lt); box-shadow: 0 30px 70px rgba(10,15,20,.22); padding: 26px; border-top: 6px solid var(--ember); }
+    .booking-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+    .booking-head h2 { font-size: 1.3rem; font-weight: 900; text-transform: uppercase; color: var(--deep); }
+    .booking-head p { font-size: .85rem; color: var(--muted); }
+    .booking-head .live { color: var(--teal); font-weight: 700; }
+    .fields { display: grid; grid-template-columns: 1.3fr 1.3fr .9fr 1fr auto; gap: 14px; align-items: end; }
+    .fields label { display: block; font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--teal); margin-bottom: 6px; }
+    .fields select, .fields input { width: 100%; font: inherit; font-weight: 600; padding: 14px 14px; border: 2px solid rgba(46,111,115,.35); background: #fff; color: var(--ink); outline: none; border-radius: 0; appearance: none; }
+    .fields select { background-image: linear-gradient(45deg, transparent 50%, var(--teal) 50%), linear-gradient(135deg, var(--teal) 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 34px; }
+    .fields select:focus, .fields input:focus { border-color: var(--teal); }
+    .fine { font-size: .78rem; color: var(--muted); margin-top: 12px; }
+
+    /* Features */
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding-top: 80px; padding-bottom: 60px; }
+    .feat svg { width: 44px; height: 44px; stroke: var(--deep); fill: none; stroke-width: 1.8; margin-bottom: 14px; }
+    .feat h3 { color: var(--teal); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; }
+    .feat p { color: var(--muted); font-size: .92rem; }
+
+    .kicker { font-size: .75rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--ember); margin-bottom: 10px; }
+    .h2 { font-size: clamp(1.9rem, 4.6vw, 3.2rem); font-weight: 900; text-transform: uppercase; line-height: 1; letter-spacing: -.01em; margin-bottom: 16px; }
+
+    /* Banda método */
+    .band { background: var(--teal); color: var(--sand); clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%); padding: 120px 0; position: relative; overflow: hidden; }
+    .band .outline { position: absolute; right: -20px; top: 40px; font-size: clamp(5rem, 16vw, 13rem); font-weight: 900; line-height: .8; color: transparent; -webkit-text-stroke: 1.5px rgba(234,220,200,.18); text-transform: uppercase; pointer-events: none; }
+    .band .lead { max-width: 56ch; color: rgba(234,220,200,.85); margin-bottom: 44px; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+    .step { padding: 0 22px 0 0; position: relative; }
+    .step .num { font-size: 4rem; font-weight: 900; line-height: 1; color: transparent; -webkit-text-stroke: 2px var(--aqua); }
+    .step:last-child .num { -webkit-text-stroke-color: var(--ember); color: var(--ember); }
+    .step .bar-line { height: 4px; background: rgba(234,220,200,.2); margin: 14px 0 16px; position: relative; }
+    .step .bar-line i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--aqua); }
+    .step:last-child .bar-line i { background: var(--ember); }
+    .step h3 { font-size: 1.05rem; font-weight: 800; text-transform: uppercase; margin-bottom: 6px; }
+    .step p { font-size: .9rem; color: rgba(234,220,200,.82); }
+    .promise { margin-top: 50px; display: flex; gap: 24px; align-items: center; justify-content: space-between; flex-wrap: wrap; border-top: 1px solid rgba(234,220,200,.25); padding-top: 30px; }
+    .promise p { font-size: 1.15rem; max-width: 56ch; }
+    .promise b { color: var(--sand); background: var(--deep); padding: 0 6px; }
+
+    /* Zonas */
+    .zones-sec { padding-top: 90px; padding-bottom: 60px; }
+    .zones { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--deep); }
+    .zone { all: unset; cursor: pointer; padding: 28px 24px 28px 0; border-bottom: 2px solid rgba(15,61,62,.15); display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: start; transition: background .2s, padding .2s; }
+    .zone:hover, .zone:focus-visible { background: var(--sand); padding-left: 14px; }
+    .zone .n { font-weight: 900; color: var(--aqua); font-size: 1.4rem; line-height: 1; -webkit-text-stroke: 1px var(--teal); }
+    .zone h3 { font-weight: 800; text-transform: uppercase; font-size: 1.05rem; color: var(--deep); }
+    .zone p { font-size: .86rem; color: var(--muted); margin-top: 4px; }
+    .zone .go { color: var(--ember); font-weight: 900; font-size: 1.3rem; }
+
+    /* Sergio */
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; margin: 40px 0 80px; position: relative; }
+    .about .img { position: relative; min-height: 520px; clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%); }
+    .about-txt { padding: 50px 0 50px 50px; position: relative; }
+    .about-txt .outline { position: absolute; top: 0; left: 40px; font-size: 7rem; font-weight: 900; line-height: .8; color: transparent; -webkit-text-stroke: 1.5px rgba(46,111,115,.18); text-transform: uppercase; pointer-events: none; }
+    .about-txt blockquote { font-size: 1.3rem; font-weight: 700; line-height: 1.4; color: var(--deep); border-left: 5px solid var(--ember); padding-left: 18px; margin: 16px 0 24px; }
+    .creds { list-style: none; display: grid; gap: 10px; margin-bottom: 30px; font-size: .95rem; }
+    .creds li { display: flex; gap: 12px; }
+    .creds li::before { content: ""; flex: none; width: 10px; height: 10px; margin-top: 7px; background: var(--teal); clip-path: polygon(0 0, 100% 50%, 0 100%); }
+
+    /* Testimonios */
+    .stories { background: var(--sand); padding: 80px 0; }
+    .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; }
+    .story { background: var(--sand-lt); padding: 28px; border-bottom: 5px solid var(--teal); display: flex; flex-direction: column; gap: 14px; }
+    .story .back { align-self: flex-start; font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; background: var(--deep); color: var(--sand); padding: 5px 10px; }
+    .story p { font-size: .98rem; }
+    .story footer { margin-top: auto; font-size: .82rem; color: var(--muted); font-weight: 600; }
+
+    /* Precios */
+    .prices { background: var(--deep); color: var(--sand); clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%); padding: 130px 0 90px; position: relative; overflow: hidden; }
+    .prices .img.court { position: absolute; left: 0; top: 0; bottom: 0; width: 42%; clip-path: polygon(0 0, 100% 12%, 70% 100%, 0 100%); opacity: .9; }
+    .price-box { margin-left: auto; width: min(560px, 100%); position: relative; }
+    .price-box .h2 { color: var(--sand); }
+    .table { margin: 26px 0 30px; }
+    .trow { display: flex; justify-content: space-between; gap: 12px; padding: 16px 0; border-bottom: 1px solid rgba(234,220,200,.2); align-items: center; }
+    .trow span { font-weight: 600; }
+    .trow small { display: block; font-weight: 400; font-size: .8rem; color: var(--aqua); }
+    .trow b { font-size: 1.05rem; }
+    .trow.hl span::before { content: "★ "; color: var(--ember); }
+    .price-note { font-size: .85rem; color: rgba(234,220,200,.75); margin-top: 14px; }
+
+    /* FAQ */
+    .faq-sec { padding-top: 80px; padding-bottom: 80px; }
+    .faq { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; margin-top: 24px; }
+    details { border-bottom: 2px solid rgba(15,61,62,.15); padding: 20px 0; }
+    summary { cursor: pointer; font-weight: 800; color: var(--deep); list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+    summary::after { content: "+"; color: var(--ember); font-size: 1.4rem; line-height: 1; font-weight: 900; }
+    details[open] summary::after { content: "–"; }
+    details p { color: var(--muted); margin-top: 10px; font-size: .93rem; }
+
+    /* CTA final */
+    .final { background: var(--ember); color: #fff; padding: 70px 0; clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%); }
+    .final .wrap { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .final .h2 { margin: 0; max-width: 16ch; }
+    .final .btn { background: var(--ink); }
+    .final .btn:hover { background: var(--deep); }
+
+    footer.site { background: var(--ink); color: rgba(234,220,200,.7); font-size: .84rem; padding: 40px 0 110px; }
+    footer.site .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+    .sticky { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: var(--deep); color: var(--sand); padding: 10px 12px 10px 18px; align-items: center; justify-content: space-between; gap: 10px; box-shadow: 0 -10px 30px rgba(0,0,0,.2); }
+    .sticky span { font-size: .85rem; font-weight: 700; }
+
+    @media (max-width: 960px) {
+      nav { display: none; }
+      .hero-grid, .about { grid-template-columns: 1fr; }
+      .collage { height: 360px; }
+      .fields { grid-template-columns: 1fr 1fr; }
+      .fields .full, .fields button { grid-column: 1 / -1; }
+      .features, .grid3, .zones { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; gap: 30px 0; }
+      .about .img { min-height: 360px; clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+      .about-txt { padding: 40px 0 0; }
+      .prices .img.court { display: none; }
+      .faq { grid-template-columns: 1fr; }
+      .sticky { display: flex; }
+      header .btn { display: none; }
+    }
+    @media (max-width: 520px) {
+      .fields { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .quote-card { width: 230px; right: 0; }
+      .img.s1 { width: 120px; height: 110px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap bar">
+      <a class="brand" href="#">
+        <span class="mark">KT</span>
+        <span><b>Kinetrauma Deportivo</b><small>Sergio Trigo · Kinesiólogo</small></span>
+      </a>
+      <nav aria-label="Principal">
+        <a href="#metodo">Reintegro</a>
+        <a href="#lesiones">Lesiones</a>
+        <a href="#sergio">Sergio</a>
+        <a href="#precios">Precios</a>
+        <a href="#faq">Preguntas</a>
+      </nav>
+      <a href="#agendar" class="btn sm">Agendar hora</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="tagline">Reintegro deportivo · Santiago</div>
+        <h1>Atención de élite <span>para todos</span></h1>
+        <p class="sub">No tienes que ser profesional para que te traten como uno. <b>Kinesiología especializada en lesiones deportivas</b>: vuelve a tu deporte más fuerte y sin miedo a recaer.</p>
+        <div class="hero-actions">
+          <a href="#agendar" class="btn">Agenda tu hora →</a>
+          <a href="#metodo" class="btn line">Cómo trabajo</a>
+        </div>
+      </div>
+      <div class="collage">
+        <div class="img main"><span>📷 Foto principal: Sergio con deportista en reintegro (cancha / gimnasio)</span></div>
+        <div class="img s1"><span>📷 Detalle: vendaje / ejercicio</span></div>
+        <div class="quote-card">
+          <p>“Trato a cada paciente como si mañana tuviera la final. Da lo mismo si juegas en primera o en la liga del barrio.”</p>
+          <small>— Sergio Trigo, kinesiólogo</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVA -->
+  <div class="wrap booking-wrap">
+    <form id="agendar" class="booking" onsubmit="agendar(event)">
+      <div class="booking-head">
+        <h2>Reserva en 30 segundos</h2>
+        <p><span class="live">● Próxima hora: mañana</span> · Te confirmo por WhatsApp</p>
+      </div>
+      <div class="fields">
+        <div><label for="zona">¿Qué te duele?</label>
+          <select id="zona" name="zona">
+            <option>Rodilla</option><option>Tobillo y pie</option><option>Muslo</option><option>Hombro</option><option>Espalda</option><option>Cadera y pubis</option><option>Otro</option>
+          </select></div>
+        <div><label for="dia">Día</label><select id="dia" name="dia"></select></div>
+        <div><label for="bloque">Horario</label>
+          <select id="bloque" name="bloque"><option value="en la mañana">En la mañana</option><option value="en la tarde">En la tarde</option><option value="después de la pega">Después de la pega</option></select></div>
+        <div class="full"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" placeholder="Ej: Camila" autocomplete="given-name" required></div>
+        <button class="btn" type="submit">Agendar →</button>
+      </div>
+      <p class="fine">Sin pago previo · Boleta para reembolso Isapre · Cancela gratis hasta 12 h antes · Registro Superintendencia de Salud N° <span class="ph">[——]</span></p>
+    </form>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="wrap features">
+    <div class="feat">
+      <svg viewBox="0 0 48 48"><path d="M8 40 L20 22 L28 30 L40 10"/><path d="M32 10 H40 V18"/></svg>
+      <h3>Reintegro deportivo</h3>
+      <p>Un plan por fases para volver a entrenar y competir, con test objetivos antes de darte el alta.</p>
+    </div>
+    <div class="feat">
+      <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><path d="M24 14 V24 L31 28"/></svg>
+      <h3>Hora en menos de 48 h</h3>
+      <p>Una lesión tratada a tiempo se recupera más rápido. Te atiendo esta misma semana.</p>
+    </div>
+    <div class="feat">
+      <svg viewBox="0 0 48 48"><path d="M24 6 L38 12 V24 C38 33 31 39 24 42 C17 39 10 33 10 24 V12 Z"/><path d="M18 24 L22 28 L30 20"/></svg>
+      <h3>Prevención y rendimiento</h3>
+      <p>Evaluación de fuerza y movimiento para que no te lesiones de nuevo y rindas más.</p>
+    </div>
+  </div>
+
+  <!-- MÉTODO -->
+  <section class="band" id="metodo">
+    <div class="outline" aria-hidden="true">Vuelve</div>
+    <div class="wrap">
+      <div class="kicker" style="color:var(--sand)">Método de reintegro</div>
+      <h2 class="h2">De la lesión<br>a la cancha</h2>
+      <p class="lead">El mismo proceso que sigue un deportista profesional, adaptado a tu deporte, tu nivel y tus tiempos.</p>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><div class="bar-line"><i style="width:25%"></i></div><h3>Evaluación</h3><p>Diagnóstico funcional, historia de tu lesión y objetivos. Sales con un plan escrito.</p></div>
+        <div class="step"><div class="num">02</div><div class="bar-line"><i style="width:50%"></i></div><h3>Control del dolor</h3><p>Terapia manual y ejercicio para recuperar movilidad y bajar la inflamación.</p></div>
+        <div class="step"><div class="num">03</div><div class="bar-line"><i style="width:75%"></i></div><h3>Fuerza y control</h3><p>Fuerza, potencia y control motor progresivos, con cargas medibles.</p></div>
+        <div class="step"><div class="num">04</div><div class="bar-line"><i style="width:100%"></i></div><h3>Vuelta al deporte</h3><p>Gesto deportivo y test de alta: fuerza, salto y agilidad antes de competir.</p></div>
+      </div>
+      <div class="promise">
+        <p><b>No te doy el alta por calendario, te la doy por resultados.</b> Vuelves cuando los test dicen que estás listo, para que no recaigas a las dos semanas.</p>
+        <a href="#agendar" class="btn">Empezar mi evaluación →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONAS -->
+  <section class="wrap zones-sec" id="lesiones">
+    <div class="kicker">¿Qué te duele?</div>
+    <h2 class="h2" style="color:var(--deep)">Elige la zona<br>y agenda directo</h2>
+    <p style="color:var(--muted);max-width:56ch;margin-bottom:30px">Lesiones típicas de quienes corren, juegan a la pelota o van al gym. Toca una zona y queda marcada en tu reserva.</p>
+    <div class="zones">
+      <button class="zone" data-zona="Rodilla"><span class="n">01</span><div><h3>Rodilla</h3><p>LCA, menisco, tendinitis rotuliana, post-operatorio</p></div><span class="go">→</span></button>
+      <button class="zone" data-zona="Tobillo y pie"><span class="n">02</span><div><h3>Tobillo y pie</h3><p>Esguinces a repetición, Aquiles, fascitis plantar</p></div><span class="go">→</span></button>
+      <button class="zone" data-zona="Muslo"><span class="n">03</span><div><h3>Muslo</h3><p>Desgarros de isquiotibiales y cuádriceps</p></div><span class="go">→</span></button>
+      <button class="zone" data-zona="Hombro"><span class="n">04</span><div><h3>Hombro</h3><p>Manguito rotador, luxaciones, dolor al lanzar</p></div><span class="go">→</span></button>
+      <button class="zone" data-zona="Espalda"><span class="n">05</span><div><h3>Espalda</h3><p>Lumbago, dolor al correr o levantar peso</p></div><span class="go">→</span></button>
+      <button class="zone" data-zona="Cadera y pubis"><span class="n">06</span><div><h3>Cadera y pubis</h3><p>Pubalgia, dolor de cadera en corredores</p></div><span class="go">→</span></button>
+    </div>
+  </section>
+
+  <!-- SERGIO -->
+  <section class="wrap about" id="sergio">
+    <div class="img"><span>📷 Retrato de Sergio (vertical, luz natural, en su box de atención)</span></div>
+    <div class="about-txt">
+      <div class="outline" aria-hidden="true">Sergio</div>
+      <div class="kicker">Quién te atiende</div>
+      <h2 class="h2" style="color:var(--deep)">Hola,<br>soy Sergio</h2>
+      <blockquote>Kinesiólogo especialista en reintegro deportivo. Mi trabajo es que vuelvas a hacer lo que te gusta, mejor que antes.</blockquote>
+      <ul class="creds">
+        <li>Kinesiólogo, <span class="ph">[Universidad]</span></li>
+        <li><span class="ph">[N]</span> años en kinesiología deportiva y traumatológica</li>
+        <li>Trabajo con <span class="ph">[clubes / deportistas]</span></li>
+        <li>Formación en <span class="ph">[especialización]</span></li>
+      </ul>
+      <a href="#agendar" class="btn">Agenda con Sergio →</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="stories">
+    <div class="wrap">
+      <div class="kicker">Volvieron a su deporte</div>
+      <h2 class="h2" style="color:var(--deep)">Historias de reintegro</h2>
+      <p style="color:var(--muted)"><span class="ph">Reemplazar por testimonios reales con permiso del paciente</span></p>
+      <div class="grid3">
+        <article class="story"><span class="back">Volvió al fútbol</span><p>“Después de la operación de LCA pensé que no volvía a jugar. A los meses estaba de vuelta en la cancha y sin miedo.”</p><footer><span class="ph">[Nombre]</span> · Fútbol amateur · Rodilla</footer></article>
+        <article class="story"><span class="back">Corrió su maratón</span><p>“Llegué con un dolor de cadera que no me dejaba correr. Sergio me armó un plan y terminé los 42K.”</p><footer><span class="ph">[Nombre]</span> · Running · Cadera</footer></article>
+        <article class="story"><span class="back">Volvió al box</span><p>“Me explicó todo, medimos la fuerza en cada etapa y volví al crossfit con más técnica que antes.”</p><footer><span class="ph">[Nombre]</span> · CrossFit · Hombro</footer></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section class="prices" id="precios">
+    <div class="img court"><span>📷 Foto: cancha / pista / gimnasio</span></div>
+    <div class="wrap">
+      <div class="price-box">
+        <div class="kicker">Precios claros</div>
+        <h2 class="h2">Sin letra chica</h2>
+        <div class="table">
+          <div class="trow hl"><span>Primera sesión<small>Evaluación completa + plan de reintegro · 60 min</small></span><b><span class="ph">$[——]</span></b></div>
+          <div class="trow"><span>Sesión de seguimiento<small>45 min</small></span><b><span class="ph">$[——]</span></b></div>
+          <div class="trow"><span>Test de alta deportiva<small>Fuerza, salto y agilidad</small></span><b><span class="ph">$[——]</span></b></div>
+          <div class="trow"><span>Pack 8 sesiones<small>Precio preferente</small></span><b><span class="ph">$[——]</span></b></div>
+          <div class="trow"><span>Atención a domicilio<small>Según comuna</small></span><b><span class="ph">$[——]</span></b></div>
+        </div>
+        <a href="#agendar" class="btn">Agendar primera sesión →</a>
+        <p class="price-note">Emito boleta para reembolso en Isapre o seguro complementario.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="wrap faq-sec" id="faq">
+    <div class="kicker">Preguntas frecuentes</div>
+    <h2 class="h2" style="color:var(--deep)">Antes de agendar</h2>
+    <div class="faq">
+      <details><summary>¿Necesito orden médica?</summary><p>No para la evaluación. Si tienes una orden o exámenes (resonancia, ecografía), tráelos. Si los necesitas, te derivo a un traumatólogo de confianza.</p></details>
+      <details><summary>¿Puedo pedir reembolso en mi Isapre?</summary><p>Sí. Emito boleta de honorarios en cada sesión para que la presentes en tu Isapre o seguro complementario. El monto depende de tu plan.</p></details>
+      <details><summary>No soy deportista profesional, ¿me sirve?</summary><p>Totalmente. La idea es justamente esa: atención de deportista profesional para cualquiera que entrena, juega o quiere volver a moverse sin dolor.</p></details>
+      <details><summary>¿Cuántas sesiones voy a necesitar?</summary><p>Depende de la lesión y de tu objetivo. En la primera sesión te doy un plan con fases y un estimado de tiempos.</p></details>
+      <details><summary>¿Qué llevo a la primera sesión?</summary><p>Ropa deportiva, tus exámenes si tienes, y si puedes, las zapatillas con las que entrenas.</p></details>
+      <details><summary>¿Atiendes a domicilio?</summary><p><span class="ph">[Confirmar con Sergio: comunas y valor]</span></p></details>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2 class="h2">¿Listo para volver a la cancha?</h2>
+      <a href="#agendar" class="btn">Agendar mi hora →</a>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <span>© Kinetrauma Deportivo · Sergio Trigo, Kinesiólogo · kinetraumadeportivo.cl</span>
+      <span><span class="ph">[Dirección, comuna]</span> · <a href="#">Instagram</a> · <a href="#" class="wa">WhatsApp</a></span>
+    </div>
+  </footer>
+
+  <div class="sticky">
+    <span>Próxima hora: mañana</span>
+    <a href="#agendar" class="btn sm">Agendar</a>
+  </div>
+
+  <script>
+    // Reemplazar por el WhatsApp real de Sergio (formato internacional, sin +)
+    const WHATSAPP = "56900000000";
+
+    // Próximos 6 días hábiles (lunes a sábado)
+    const dia = document.getElementById("dia");
+    const N = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+    const d = new Date(); let n = 0;
+    while (n < 6) {
+      d.setDate(d.getDate() + 1);
+      if (d.getDay() === 0) continue;
+      const label = n === 0 ? `Mañana (${N[d.getDay()]} ${d.getDate()})` : `${N[d.getDay()][0].toUpperCase() + N[d.getDay()].slice(1)} ${d.getDate()}`;
+      const value = n === 0 ? "mañana" : `el ${N[d.getDay()]} ${d.getDate()}`;
+      dia.insertAdjacentHTML("beforeend", `<option value="${value}">${label}</option>`);
+      n++;
+    }
+
+    document.querySelectorAll("[data-zona]").forEach(b => b.addEventListener("click", () => {
+      document.getElementById("zona").value = b.dataset.zona;
+      document.getElementById("agendar").scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(() => document.getElementById("nombre").focus({ preventScroll: true }), 500);
+    }));
+
+    document.querySelectorAll(".wa").forEach(a => a.href = `https://wa.me/${WHATSAPP}`);
+
+    function agendar(e) {
+      e.preventDefault();
+      const f = new FormData(e.target);
+      const msg = `¡Hola Sergio! Soy ${f.get("nombre")}. Quiero agendar una hora por ${f.get("zona").toLowerCase()} para ${f.get("dia")} ${f.get("bloque")}.`;
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
+    }
+  </script>
+</body>
+</html>

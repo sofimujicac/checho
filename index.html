@@ -1,273 +1,932 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checho Kine · Kinesiología Deportiva</title>
-  <meta name="description" content="Kinesiología deportiva: recuperación de lesiones, prevención y rendimiento. Agenda tu hora en menos de un minuto.">
+  <meta name="color-scheme" content="dark light">
+  <title>Sergio Trigo · Kinesiólogo deportivo en Providencia, Santiago</title>
+  <meta name="description" content="Sergio Trigo, kinesiólogo trauma deportivo en Providencia, Santiago (Av. Hernando de Aguirre 162). Ayudo a deportistas de combate, runners y gymrats a volver a entrenar sin dolor. Terapia manual, punción seca y MEP. Agenda por WhatsApp.">
+  <link rel="canonical" href="https://kinetraumadeportivo.cl/">
+  <meta property="og:title" content="Sergio Trigo · Kinesiólogo deportivo">
+  <meta property="og:description" content="Entrena sin dolor. Un plan claro desde la primera evaluación.">
+  <meta property="og:image" content="https://kinetraumadeportivo.cl/img/sergio.jpg">
+  <meta property="og:url" content="https://kinetraumadeportivo.cl/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta name="theme-color" content="#0A0F14">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230F3D3E'/%3E%3Cg fill='none' stroke='%23EADCC8' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.4 11c-.7-1.6-2.2-2.5-4.1-2.5-2.3 0-4 1.4-4 3.3 0 4.5 8.4 2.5 8.4 7.3 0 2.1-1.9 3.6-4.3 3.6-2 0-3.6-.9-4.3-2.5'/%3E%3Cpath d='M17.4 8.6h9.2M22 8.6v15'/%3E%3C/g%3E%3Ccircle cx='27' cy='23.6' r='1.5' fill='%23C6601F'/%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physiotherapy",
+    "name": "Sergio Trigo · Kinesiólogo deportivo",
+    "alternateName": "Kine Trauma Deportivo",
+    "url": "https://kinetraumadeportivo.cl/",
+    "image": "https://kinetraumadeportivo.cl/img/sergio.jpg",
+    "telephone": "+56900000000",
+    "address": { "@type": "PostalAddress", "streetAddress": "Av. Hernando de Aguirre 162, Oficina 301", "addressLocality": "Providencia", "addressRegion": "Región Metropolitana", "addressCountry": "CL" },
+    "founder": { "@type": "Person", "name": "Sergio Trigo", "jobTitle": "Kinesiólogo trauma deportivo" },
+    "sameAs": ["https://www.instagram.com/chechokine_/"]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    // Activa animaciones solo con JavaScript y aplica la paleta que estés probando antes de pintar
+    document.documentElement.classList.add("js");
+    try { const p = JSON.parse(localStorage.getItem("st-paleta") || "null"); if (p && p.vars) for (const k in p.vars) document.documentElement.style.setProperty("--" + k, p.vars[k]); } catch (e) {}
+  </script>
+  <!--
+    FOTOS: las imágenes de img/mockups/ son referenciales (Unsplash) para ver la
+    distribución. Se reemplazan por fotos reales de Sergio y sus pacientes.
+    TEXTOS ENTRE [CORCHETES]: datos que tiene que entregar Sergio.
+  -->
   <style>
+    /* ===== Paleta de marca (solo estos 6 colores) =====
+       #0A0F14 negro azulado · #0F3D3E petróleo · #2E6F73 verde azulado
+       #7FB3B8 celeste agua · #EADCC8 arena · #C6601F cobre
+       Base: "Noche andina". La herramienta Paleta cambia estas variables. */
     :root {
-      --bg: #0b1020;
-      --text: #f4f7ff;
-      --muted: rgba(244, 247, 255, .7);
-      --glass: rgba(255, 255, 255, .08);
-      --glass-strong: rgba(255, 255, 255, .14);
-      --border: rgba(255, 255, 255, .22);
-      --accent: #3cf0c5;
-      --accent-2: #4f8bff;
-      --radius: 28px;
+      --bg: #0A0F14;
+      --surface: #0F3D3E;
+      --text: #EADCC8;
+      --panel: #0F3D3E;
+      --panel-2: #2E6F73;
+      --on-panel: #EADCC8;
+      --primary: #C6601F;
+      --on-primary: #0A0F14;
+      --accent: #7FB3B8;
+      --g1: #0F3D3E;
     }
+    /* ===== Derivados (transparencias de los colores de arriba) ===== */
+    :root {
+      --muted: color-mix(in srgb, var(--text) 68%, var(--bg));
+      --surface-glass: color-mix(in srgb, var(--surface) 72%, transparent);
+      --line: color-mix(in srgb, var(--text) 15%, transparent);
+      --on-panel-muted: color-mix(in srgb, var(--on-panel) 74%, transparent);
+      --grad: linear-gradient(180deg, var(--g1) 0%, color-mix(in srgb, var(--g1) 45%, var(--bg)) 55%, var(--bg) 100%);
+      /* Palabras gigantes: más visibles arriba y se desvanecen hacia abajo */
+      --giant: linear-gradient(180deg, color-mix(in srgb, var(--accent) 85%, transparent) 0%, color-mix(in srgb, var(--accent) 45%, transparent) 55%, color-mix(in srgb, var(--accent) 6%, transparent) 100%);
+      --giant-light: linear-gradient(180deg, #EADCC8 10%, rgba(234, 220, 200, .45) 60%, rgba(234, 220, 200, .05) 100%);
+      --footer: color-mix(in srgb, var(--bg) 70%, #000);
+      --ease: cubic-bezier(.2, .7, .2, 1);
+      --ink: #EADCC8; /* texto sobre fotos: siempre arena */
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: "Inter", system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-      overflow-x: hidden;
-    }
+    body { background: var(--bg); color: var(--text); font: 400 16px/1.6 "Instrument Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; transition: background-color .4s, color .4s; }
+    h1, h2, h3, .num, .giant { font-family: "Manrope", system-ui, sans-serif; font-weight: 400; letter-spacing: -.03em; line-height: 1.08; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+    .eyebrow { display: block; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .eyebrow::before { content: "/ "; } .eyebrow::after { content: " /"; }
+    section, footer { scroll-margin-top: 72px; }
+    .cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .todo { color: var(--accent); border-bottom: 1px dashed currentColor; }
+    .h2 { font-size: clamp(2rem, 3.6vw, 3.1rem); }
 
-    /* Manchas de color animadas detrás del vidrio */
-    .blobs { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
-    .blob {
-      position: absolute; border-radius: 50%; filter: blur(80px); opacity: .55;
-      animation: float 18s ease-in-out infinite alternate;
-    }
-    .b1 { width: 520px; height: 520px; background: var(--accent); top: -120px; left: -120px; }
-    .b2 { width: 600px; height: 600px; background: var(--accent-2); bottom: -200px; right: -160px; animation-delay: -6s; }
-    .b3 { width: 380px; height: 380px; background: #b45cff; top: 40%; left: 45%; animation-delay: -12s; }
-    @keyframes float {
-      to { transform: translate(80px, -60px) scale(1.15); }
-    }
+    /* Botones */
+    .pill { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font: 500 .9rem "Instrument Sans", sans-serif; padding: 12px 22px; border-radius: 999px; border: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; white-space: nowrap; transition: background .25s, color .25s, border-color .25s, transform .25s var(--ease); }
+    .pill:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+    .pill.solid { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+    .pill.solid:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .on-dark .pill:not(.solid):hover { background: var(--ink); color: #0A0F14; border-color: var(--ink); }
+    .arrow-btn { width: 40px; height: 40px; border-radius: 50%; border: 1px solid currentColor; display: inline-grid; place-items: center; flex: none; transition: background .25s, color .25s, transform .25s var(--ease); }
 
-    /* Vidrio líquido */
-    .glass {
-      background: linear-gradient(135deg, var(--glass-strong), var(--glass));
-      backdrop-filter: blur(24px) saturate(180%);
-      -webkit-backdrop-filter: blur(24px) saturate(180%);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 20px 60px rgba(0,0,0,.35);
-    }
+    /* Palabra gigante */
+    .giant { display: block; width: 100%; text-align: center; font-weight: 300; font-size: clamp(3.6rem, 13vw, 12rem); line-height: .86; letter-spacing: -.055em; white-space: nowrap; padding-bottom: .04em; background: var(--giant); -webkit-background-clip: text; background-clip: text; color: transparent; user-select: none; pointer-events: none; will-change: transform; }
 
-    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+    /* Aparición al hacer scroll */
+    .js .reveal { opacity: 0; transform: translateY(32px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--d, 0) * 110ms); }
+    .js .reveal.in { opacity: 1; transform: none; }
 
-    /* Nav */
-    nav {
-      position: sticky; top: 12px; z-index: 10;
-      margin: 12px auto 0; max-width: 1120px;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 10px 10px 10px 22px; border-radius: 999px;
-    }
-    .logo { font-weight: 800; letter-spacing: -.02em; }
-    .logo span { color: var(--accent); }
+    /* ——— Header ——— */
+    header.nav { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+    header.nav .wrap { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 72px; gap: 20px; }
+    .progress { position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; background: var(--primary); transform-origin: 0 50%; transform: scaleX(0); }
+    .logo { display: flex; align-items: center; gap: 11px; justify-self: start; }
+    .logo svg { width: 38px; height: 38px; flex: none; }
+    .logo .mark { color: var(--primary); }
+    .logo b { display: block; font: 600 1.06rem/1.1 "Manrope", sans-serif; letter-spacing: -.02em; }
+    .logo small { display: block; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+    .menu { display: flex; gap: 2px; font-size: .88rem; }
+    .menu a { padding: 8px 14px; border-radius: 999px; color: var(--muted); transition: background .3s, color .3s, box-shadow .3s; white-space: nowrap; }
+    .menu a:hover { color: var(--text); }
+    .menu a.active { background: var(--surface); color: var(--text); box-shadow: 0 0 0 1px var(--line); }
+    .nav-right { display: flex; align-items: center; gap: 10px; justify-self: end; }
+    .nav-right .pill.active { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+    .burger { display: none; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); background: transparent; color: var(--text); cursor: pointer; place-items: center; }
+    .mobile-menu { display: none; }
 
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      border: 0; cursor: pointer; text-decoration: none; font: inherit; font-weight: 600;
-      padding: 14px 26px; border-radius: 999px;
-      color: #06121a;
-      background: linear-gradient(135deg, var(--accent), #8cffe3);
-      box-shadow: 0 8px 30px rgba(60, 240, 197, .45), inset 0 1px 0 rgba(255,255,255,.6);
-      transition: transform .2s, box-shadow .2s;
-    }
-    .btn:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 12px 40px rgba(60,240,197,.6); }
-    .btn.sm { padding: 10px 18px; }
+    /* Índice lateral */
+    .side-index { position: fixed; z-index: 25; right: 18px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 2px; padding: 10px 7px; border-radius: 999px; background: var(--surface-glass); border: 1px solid var(--line); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .side-index a { position: relative; display: grid; place-items: center; width: 22px; height: 20px; }
+    .side-index i { width: 6px; height: 6px; border-radius: 99px; background: var(--text); opacity: .35; transition: height .35s var(--ease), background .35s, opacity .35s; }
+    .side-index a.active i { height: 18px; background: var(--primary); opacity: 1; }
+    .side-index b { position: absolute; right: 32px; top: 50%; transform: translate(6px, -50%); white-space: nowrap; font: 500 .75rem "Instrument Sans", sans-serif; background: var(--surface); color: var(--text); border: 1px solid var(--line); padding: 4px 10px; border-radius: 999px; opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; }
+    .side-index a:hover b { opacity: 1; transform: translate(0, -50%); }
 
-    /* Hero */
-    .hero {
-      display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center;
-      padding: 72px 0 56px;
-    }
-    .pill {
-      display: inline-block; padding: 6px 14px; border-radius: 999px; font-size: .85rem;
-      color: var(--accent); margin-bottom: 18px;
-    }
-    h1 {
-      font-size: clamp(2.3rem, 6vw, 4.2rem); line-height: 1.05; letter-spacing: -.03em; font-weight: 800;
-    }
-    h1 em {
-      font-style: normal;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-    .lead { color: var(--muted); font-size: 1.15rem; margin: 18px 0 28px; max-width: 46ch; }
-    .proof { display: flex; gap: 24px; margin-top: 28px; flex-wrap: wrap; }
-    .proof strong { display: block; font-size: 1.6rem; }
-    .proof small { color: var(--muted); }
+    /* ——— Hero ——— */
+    .hero { position: relative; background: var(--grad); overflow: hidden; }
+    .hero .wrap { position: relative; z-index: 2; display: flex; align-items: center; min-height: clamp(600px, calc(100svh - 72px), 900px); padding-top: 48px; padding-bottom: 100px; }
+    .hero-photo { position: absolute; z-index: 1; top: 0; right: 0; bottom: 0; width: 60%; }
+    .hero-photo img { object-position: 50% 18%; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 34%); mask-image: linear-gradient(90deg, transparent 0%, #000 34%); animation: heroIn 1.6s var(--ease) both; }
+    .hero-photo .giant { position: absolute; right: 0; bottom: 0; width: auto; text-align: right; padding: 0 72px .2em 0; line-height: .86; font-size: clamp(4.5rem, 10vw, 9.5rem); background: var(--giant-light); -webkit-background-clip: text; background-clip: text; animation: rise 1.4s .25s var(--ease) both; }
+    .hero-card { width: min(480px, 100%); background: var(--surface-glass); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid var(--line); padding: 38px 36px 32px; animation: rise 1.1s .1s var(--ease) both; }
+    .hero-card h1 { font-size: clamp(3rem, 5.6vw, 4.8rem); font-weight: 500; letter-spacing: -.045em; line-height: .95; margin: 18px 0 20px; }
+    .hero-card p { color: var(--muted); font-size: .98rem; max-width: 40ch; }
+    .hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+    .proof { display: flex; align-items: center; gap: 10px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); font-size: .84rem; color: var(--muted); }
+    .proof b { color: var(--text); font-weight: 600; }
+    .proof .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 25%, transparent); flex: none; }
+    @keyframes rise { from { opacity: 0; transform: translateY(36px); } to { opacity: 1; transform: none; } }
+    @keyframes heroIn { from { opacity: 0; transform: scale(1.06); } to { opacity: 1; transform: none; } }
 
-    /* Formulario de agenda */
-    .booking { padding: 28px; }
-    .booking h2 { font-size: 1.4rem; margin-bottom: 4px; }
-    .booking p { color: var(--muted); font-size: .95rem; margin-bottom: 20px; }
-    .label { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 16px 0 8px; }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .chip input { display: none; }
-    .chip span {
-      display: inline-block; padding: 9px 14px; border-radius: 999px; cursor: pointer; font-size: .92rem;
-      background: rgba(255,255,255,.08); border: 1px solid var(--border); transition: all .15s;
+
+    /* ——— Encabezado de sección ——— */
+    .sec-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 40px; }
+    .sec-head .h2 { margin-top: 12px; }
+    .sec-head > p { color: var(--muted); max-width: 38ch; }
+
+    /* ——— ¿Para quién es? ——— */
+    .who-for { padding: 110px 0 100px; }
+    .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .who-card { position: relative; aspect-ratio: 3 / 4; overflow: hidden; color: var(--ink); display: flex; align-items: flex-end; }
+    .who-card img { transition: transform .9s var(--ease); }
+    .who-card:hover img { transform: scale(1.06); }
+    .who-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,15,20,0) 30%, rgba(10,15,20,.88)); }
+    .who-card .over { position: relative; z-index: 2; padding: 26px; }
+    .who-card .n { font: 300 .85rem "Manrope", sans-serif; opacity: .75; }
+    .who-card h3 { font-size: 1.6rem; font-weight: 500; letter-spacing: -.03em; margin: 6px 0 8px; }
+    .who-card p { font-size: .9rem; opacity: .86; max-width: 34ch; }
+
+    /* ——— Tu primera evaluación (foto de boxeo, pared verde azulado) ——— */
+    .band { position: relative; overflow: hidden; color: var(--ink); background: #0A0F14; }
+    .band .bg { position: absolute; left: 0; right: 0; top: -14%; height: 130%; width: 100%; object-fit: cover; object-position: 40% 35%; will-change: transform; }
+    .band .bg.flip { transform: scaleX(-1); }
+    .band::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(10,15,20,.72) 0%, rgba(10,15,20,.15) 68%), linear-gradient(180deg, rgba(10,15,20,.35) 0%, rgba(10,15,20,.1) 35%, rgba(10,15,20,.9) 100%); }
+    .band .wrap { position: relative; z-index: 2; min-height: 780px; display: flex; flex-direction: column; justify-content: space-between; padding-top: 110px; padding-bottom: 72px; gap: 72px; }
+    .band .eyebrow { color: rgba(234,220,200,.78); }
+    .band h2 { font-size: clamp(2.4rem, 5.2vw, 4.6rem); font-weight: 300; letter-spacing: -.045em; max-width: 16ch; margin: 16px 0 28px; }
+    .band h2 em { font-style: normal; color: #7FB3B8; }
+    .band .todo { color: #EADCC8; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; border-top: 1px solid rgba(234,220,200,.22); }
+    .steps article { padding-top: 24px; position: relative; }
+    .steps article::before { content: ""; position: absolute; top: -1px; left: 0; height: 2px; width: 0; background: var(--primary); transition: width 1.2s var(--ease); transition-delay: calc(var(--d, 0) * 220ms + 200ms); }
+    .steps article.in::before, html:not(.js) .steps article::before { width: 64px; }
+    .steps .n { font: 300 2.4rem/1 "Manrope", sans-serif; letter-spacing: -.04em; color: rgba(234,220,200,.55); }
+    .steps h3 { font-size: 1.15rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin: 14px 0 8px; }
+    .steps p { font-size: .92rem; color: rgba(234,220,200,.8); max-width: 34ch; }
+
+    /* ——— Tratamientos ——— */
+    .services { padding: 90px 0 100px; overflow: hidden; }
+    .services .giant { margin-bottom: 28px; }
+    .services .wrap { position: relative; display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; align-items: start; }
+    .services .intro { position: sticky; top: 112px; }
+    .services .intro .h2 { margin: 14px 0 20px; }
+    .services .intro p { color: var(--muted); max-width: 36ch; margin-bottom: 28px; }
+    .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .svc-grid .svc:nth-child(even) { margin-top: 56px; }
+    .svc { position: relative; min-height: 380px; overflow: hidden; color: var(--ink); display: flex; align-items: flex-end; }
+    .svc img { transition: transform .8s var(--ease); }
+    .svc:hover img { transform: scale(1.06); }
+    .svc::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,15,20,0) 30%, rgba(10,15,20,.86)); }
+    .svc .over { position: relative; z-index: 2; padding: 22px; width: 100%; }
+    .svc h3 { font-size: 1.3rem; font-weight: 500; letter-spacing: -.02em; }
+    .svc p { font-size: .86rem; opacity: .86; margin-top: 6px; max-width: 30ch; }
+    .svc .arrow-btn { width: 36px; height: 36px; border-color: rgba(234,220,200,.7); margin-top: 14px; }
+    .svc:hover .arrow-btn { background: var(--ink); color: #0A0F14; transform: translateX(4px); }
+
+    /* ——— Deportes en movimiento ——— */
+    .marquee { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; padding: 26px 0; }
+    .marquee .track { display: flex; width: max-content; animation: slide 38s linear infinite; }
+    .marquee:hover .track { animation-play-state: paused; }
+    .marquee span { font: 300 clamp(1.6rem, 3vw, 2.6rem) "Manrope", sans-serif; letter-spacing: -.03em; padding: 0 28px; display: inline-flex; align-items: center; gap: 56px; white-space: nowrap; }
+    .marquee span::after { content: "✦"; font-size: .5em; color: var(--primary); }
+    .marquee span:nth-child(even) { color: var(--muted); }
+    @keyframes slide { to { transform: translateX(-50%); } }
+
+    /* ——— Soy Sergio ——— */
+    .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .split .media { position: relative; min-height: 520px; overflow: hidden; }
+    .split .media img { transition: transform 1.2s var(--ease); }
+    .split .media:hover img { transform: scale(1.03); }
+    .split .txt { background: var(--panel); color: var(--on-panel); padding: 80px clamp(32px, 6vw, 88px); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+    .split .txt.alt { background: var(--panel-2); }
+    .split .txt .eyebrow { color: var(--on-panel-muted); }
+    .split h2 { font-size: clamp(2.6rem, 4.6vw, 4rem); font-weight: 500; letter-spacing: -.045em; margin: 14px 0 20px; }
+    .split .txt p { color: var(--on-panel-muted); font-size: 1rem; max-width: 46ch; margin-bottom: 16px; }
+    .split .txt .creds { font-size: .82rem; letter-spacing: .04em; margin-bottom: 28px; }
+    .split .txt .todo { color: var(--on-panel); }
+    .quote { font: 300 clamp(1.7rem, 2.8vw, 2.4rem)/1.2 "Manrope", sans-serif; letter-spacing: -.03em; margin: 14px 0 18px; max-width: 18ch; }
+    .stat-tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(200deg, transparent 35%, rgba(10,15,20,.7)); }
+    .stat-tile .num { position: absolute; z-index: 2; left: clamp(32px, 4vw, 48px); bottom: 40px; font-size: clamp(3rem, 6vw, 5rem); color: var(--ink); }
+    .stat-tile .num small { display: block; font: 400 .9rem "Instrument Sans", sans-serif; letter-spacing: 0; color: rgba(234,220,200,.82); margin-top: 8px; }
+
+    /* ——— Resultados (carrusel) ——— */
+    .testi { background: var(--grad); padding: 80px 0 100px; overflow: hidden; }
+    .testi .giant { background: var(--giant-light); -webkit-background-clip: text; background-clip: text; margin-bottom: 28px; }
+    .car-btns { display: flex; gap: 10px; flex: none; }
+    .car-btns button { width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--text); background: transparent; color: var(--text); cursor: pointer; font-size: 1rem; transition: background .25s, color .25s, opacity .25s; }
+    .car-btns button:hover { background: var(--text); color: var(--bg); }
+    .car-btns button:disabled { opacity: .3; pointer-events: none; }
+    .t-track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 40px) / 2.6); gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 4px; }
+    .t-track::-webkit-scrollbar { display: none; }
+    .tcard { scroll-snap-align: start; background: var(--surface-glass); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--line); padding: 26px; display: flex; flex-direction: column; gap: 12px; }
+    .tcard h3 { font-size: 1.05rem; font-weight: 500; letter-spacing: -.01em; display: flex; gap: 10px; align-items: baseline; }
+    .tcard h3::before { content: "\201C\201C"; color: var(--primary); font-size: 1.4rem; line-height: .9; letter-spacing: -.1em; }
+    .tcard p { font-size: .92rem; color: var(--muted); }
+    .who { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 8px; }
+    .who img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; flex: none; }
+    .who b { display: block; font-weight: 500; font-size: .9rem; }
+    .who small { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+    .car-bar { height: 2px; background: var(--line); margin-top: 26px; position: relative; }
+    .car-bar i { position: absolute; left: 0; top: 0; height: 100%; background: var(--text); width: 30%; transition: left .2s; }
+    .sample { font-size: .78rem; color: var(--muted); margin-top: 16px; }
+
+    /* ——— Plan online ——— */
+    .plan { position: relative; overflow: hidden; background: radial-gradient(80% 90% at 85% 50%, color-mix(in srgb, var(--panel-2) 70%, transparent), transparent 70%), var(--panel); color: var(--on-panel); }
+    .plan .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; padding-top: 110px; padding-bottom: 110px; }
+    .plan .eyebrow { color: var(--on-panel-muted); }
+    .plan .tagline { display: inline-block; font: 600 .74rem "Instrument Sans", sans-serif; letter-spacing: .3em; text-transform: uppercase; color: var(--primary); }
+    .plan h2 { font-size: clamp(2.6rem, 5vw, 4.4rem); font-weight: 500; letter-spacing: -.045em; line-height: .98; margin: 14px 0 22px; }
+    .plan p { color: var(--on-panel-muted); max-width: 46ch; margin-bottom: 10px; }
+    .plan .todo { color: var(--on-panel); }
+    .plan ul { list-style: none; display: grid; gap: 10px; margin: 22px 0 32px; }
+    .plan li { display: flex; gap: 12px; align-items: center; }
+    .plan li::before { content: ""; width: 22px; height: 22px; flex: none; border-radius: 50%; border: 1px solid var(--on-panel-muted); background: no-repeat center / 11px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 10'%3E%3Cpath d='M1 5l3.5 3.5L11 1' fill='none' stroke='%23EADCC8' stroke-width='1.6'/%3E%3C/svg%3E"); }
+    .phone-wrap { position: relative; justify-self: center; }
+    .phone { width: 290px; height: 590px; border-radius: 46px; background: #0A0F14; padding: 11px; box-shadow: 0 50px 90px rgba(0,0,0,.5), inset 0 0 0 1.5px rgba(234,220,200,.14); transform: rotate(-4deg); }
+    .screen { position: relative; height: 100%; border-radius: 36px; overflow: hidden; background: linear-gradient(180deg, #0F3D3E 0%, #0A0F14 75%); color: #EADCC8; padding: 46px 18px 18px; display: flex; flex-direction: column; gap: 10px; font-size: .78rem; }
+    .screen::before { content: ""; position: absolute; top: 10px; left: 50%; width: 84px; height: 24px; border-radius: 20px; background: #0A0F14; transform: translateX(-50%); }
+    .screen .top { display: flex; justify-content: space-between; color: rgba(234,220,200,.65); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; }
+    .screen h4 { font: 500 1.35rem/1.1 "Manrope", sans-serif; letter-spacing: -.03em; margin: 2px 0 4px; }
+    .screen .bar { height: 5px; border-radius: 9px; background: rgba(234,220,200,.12); overflow: hidden; }
+    .screen .bar i { display: block; height: 100%; width: 50%; background: #C6601F; border-radius: 9px; }
+    .ex { display: flex; align-items: center; gap: 10px; padding: 11px 12px; border-radius: 14px; background: rgba(234,220,200,.06); }
+    .ex .ck { width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid rgba(234,220,200,.4); flex: none; display: grid; place-items: center; font-size: .7rem; }
+    .ex.done .ck { background: #C6601F; border-color: #C6601F; color: #0A0F14; }
+    .ex.done b { text-decoration: line-through; opacity: .6; }
+    .ex b { display: block; font-weight: 500; font-size: .82rem; }
+    .ex small { color: rgba(234,220,200,.6); font-size: .7rem; }
+    .screen .check { margin-top: auto; display: flex; gap: 10px; align-items: center; padding: 12px; border-radius: 14px; background: #2E6F73; }
+    .screen .check .av { width: 30px; height: 30px; border-radius: 50%; background: #EADCC8; color: #0F3D3E; display: grid; place-items: center; flex: none; }
+    .chip { position: absolute; right: -54px; top: 34%; background: #EADCC8; color: #0A0F14; padding: 12px 16px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,.35); font-size: .74rem; transform: rotate(3deg); }
+    .chip b { display: block; font: 500 1.3rem/1.1 "Manrope", sans-serif; letter-spacing: -.03em; color: #0F3D3E; }
+    .chip-2 { right: auto; left: -60px; top: 70%; transform: rotate(-3deg); background: #C6601F; color: #0A0F14; }
+    .chip-2 b { color: #0A0F14; }
+
+    /* ——— Preguntas frecuentes ——— */
+    .faq { padding: 110px 0; }
+    .faq .wrap { display: grid; grid-template-columns: .9fr 1.3fr; gap: 56px; align-items: start; }
+    .faq .intro { position: sticky; top: 112px; }
+    .faq .intro .h2 { margin: 14px 0 18px; }
+    .faq .intro p { color: var(--muted); }
+    .faq .intro a { color: var(--text); border-bottom: 1px solid var(--primary); }
+    .faq details { border-top: 1px solid var(--line); }
+    .faq details:last-child { border-bottom: 1px solid var(--line); }
+    .faq summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; font: 500 1.15rem "Manrope", sans-serif; letter-spacing: -.02em; cursor: pointer; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; font-weight: 300; font-size: 1.8rem; line-height: 1; color: var(--muted); transition: transform .35s var(--ease), color .35s; flex: none; }
+    .faq details[open] summary::after { transform: rotate(45deg); color: var(--primary); }
+    .faq details p { padding: 0 0 24px; color: var(--muted); max-width: 56ch; }
+    .faq .addr, .proof a, .book .fine a { color: var(--text); border-bottom: 1px solid var(--accent); }
+    .book .fine a { color: #EADCC8; }
+
+    /* ——— Agenda (Santiago de noche) ——— */
+    .book { position: relative; color: var(--ink); text-align: center; padding: 80px 0 120px; overflow: hidden; background: #0A0F14; }
+    .book .bg { position: absolute; z-index: 0; left: 0; right: 0; top: -15%; height: 130%; width: 100%; object-fit: cover; object-position: 50% 45%; will-change: transform; }
+    .book::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(10,15,20,.92) 0%, rgba(15,61,62,.55) 55%, rgba(10,15,20,.95) 100%); }
+    .book .giant, .book .inner { position: relative; z-index: 2; }
+    .book .giant { background: linear-gradient(180deg, rgba(127,179,184,.85) 0%, rgba(127,179,184,.4) 55%, rgba(127,179,184,.05) 100%); -webkit-background-clip: text; background-clip: text; margin-bottom: 24px; }
+    .book .inner { display: flex; flex-direction: column; align-items: center; }
+    .book .eyebrow { color: rgba(234,220,200,.78); }
+    .book h2 { font-size: clamp(2.6rem, 5.4vw, 4.6rem); font-weight: 500; letter-spacing: -.045em; line-height: .98; margin: 14px 0 14px; }
+    .book .lead { color: rgba(234,220,200,.82); }
+    .book form { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 32px; width: 100%; max-width: 700px; }
+    .book select, .book input { font: inherit; font-size: .92rem; color: var(--ink); background: rgba(234,220,200,.1); border: 1px solid rgba(234,220,200,.32); border-radius: 999px; padding: 12px 18px; outline: none; appearance: none; -webkit-appearance: none; min-width: 190px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+    .book select option { color: #0A0F14; }
+    .book input::placeholder { color: rgba(234,220,200,.7); }
+    .book select:focus, .book input:focus { border-color: var(--ink); }
+    .book button.pill { background: #C6601F; color: #0A0F14; border-color: #C6601F; }
+    .book button.pill:hover { filter: brightness(1.1); transform: translateY(-2px); }
+    .book .fine { font-size: .8rem; color: rgba(234,220,200,.72); margin-top: 16px; }
+
+    /* ——— Footer ——— */
+    footer { position: relative; background: var(--footer); color: rgba(234,220,200,.72); padding: 72px 0 110px; font-size: .86rem; }
+    footer .wrap { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; }
+    footer h4 { font: 500 .9rem "Instrument Sans", sans-serif; color: #EADCC8; margin-bottom: 12px; }
+    footer ul { list-style: none; display: grid; gap: 6px; }
+    footer .logo { color: #EADCC8; margin-bottom: 14px; }
+    footer .logo .mark { color: #C6601F; }
+    footer .logo small { color: rgba(234,220,200,.6); }
+    footer .copy { grid-column: 1 / -1; border-top: 1px solid rgba(234,220,200,.12); padding-top: 22px; font-size: .78rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+    .mobile-cta { display: none; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 40; background: var(--surface-glass); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--line); border-radius: 999px; padding: 8px 8px 8px 20px; align-items: center; justify-content: space-between; gap: 10px; font-size: .88rem; }
+
+    /* ——— Herramienta de paleta (solo para revisar diseño) ——— */
+    .pal-btn { position: fixed; z-index: 60; left: 20px; bottom: 20px; display: none; align-items: center; gap: 8px; font: 500 .85rem "Instrument Sans", sans-serif; padding: 10px 16px 10px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--text); cursor: pointer; box-shadow: 0 8px 30px rgba(0,0,0,.3); }
+    .pal-btn .sw { display: flex; } .pal-btn .sw i { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--bg); margin-left: -5px; } .pal-btn .sw i:first-child { margin-left: 0; }
+    .show-pal .pal-btn { display: inline-flex; }
+    .pal { position: fixed; z-index: 61; left: 20px; bottom: 76px; width: 320px; max-height: calc(100svh - 110px); overflow: auto; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 18px; padding: 18px; box-shadow: 0 20px 60px rgba(0,0,0,.4); display: none; font-size: .85rem; }
+    .pal.open { display: block; }
+    .pal h4 { font: 600 .95rem "Manrope", sans-serif; margin-bottom: 4px; }
+    .pal .hint { color: var(--muted); font-size: .78rem; margin-bottom: 12px; }
+    .pal .brand { display: flex; gap: 4px; margin-bottom: 12px; }
+    .pal .brand button { flex: 1; height: 26px; border-radius: 6px; border: 1px solid var(--line); cursor: pointer; }
+    .pal .presets { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 14px; }
+    .pal .presets button { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line); background: transparent; color: inherit; font: inherit; font-size: .8rem; cursor: pointer; text-align: left; }
+    .pal .presets button.on { border-color: var(--text); box-shadow: inset 0 0 0 1px var(--text); }
+    .pal .presets .dots { display: flex; flex: none; } .pal .presets .dots i { width: 12px; height: 12px; border-radius: 50%; margin-left: -4px; border: 1px solid rgba(0,0,0,.2); } .pal .presets .dots i:first-child { margin-left: 0; }
+    .pal .rows { display: grid; gap: 6px; }
+    .pal label { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .pal label span { flex: 1; }
+    .pal label code { font-size: .72rem; color: var(--muted); width: 62px; text-align: right; }
+    .pal select { font: inherit; font-size: .78rem; color: var(--text); background: transparent; border: 1px solid var(--line); border-radius: 6px; padding: 3px 6px; }
+    .pal select option { color: #0A0F14; }
+    .pal .acts { display: flex; gap: 8px; margin-top: 14px; }
+    .pal .acts button { flex: 1; padding: 9px; border-radius: 999px; border: 1px solid var(--text); background: transparent; color: inherit; font: inherit; font-size: .8rem; cursor: pointer; }
+    .pal .acts button.main { background: var(--text); color: var(--bg); }
+
+    /* ——— Responsive ——— */
+    @media (max-width: 1180px) {
+      .menu, header.nav .nav-right .pill { display: none; }
+      .burger { display: grid; }
+      header.nav .wrap { grid-template-columns: 1fr auto; }
+      .mobile-menu { position: absolute; left: 0; right: 0; top: 100%; background: var(--bg); border-bottom: 1px solid var(--line); padding: 10px 24px 18px; flex-direction: column; gap: 4px; }
+      .mobile-menu.open { display: flex; }
+      .mobile-menu a { padding: 12px 16px; border-radius: 999px; color: var(--muted); }
+      .mobile-menu a.active { background: var(--surface); color: var(--text); box-shadow: 0 0 0 1px var(--line); }
+      .mobile-menu .pill { margin-top: 8px; color: var(--on-primary); }
+      .side-index { display: none; }
+      .hero-photo .giant { padding-right: 32px; }
     }
-    .chip input:checked + span {
-      background: var(--accent); color: #06121a; border-color: transparent; font-weight: 600;
+    @media (max-width: 1000px) {
+      .wrap { padding: 0 24px; }
+      .hero .wrap { display: block; min-height: 0; padding-top: 0; padding-bottom: 32px; }
+      .hero-photo { position: relative; width: 100%; height: 460px; }
+      .hero-photo img { -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%); mask-image: linear-gradient(180deg, #000 70%, transparent 100%); object-position: 50% 15%; }
+      .hero-photo .giant { left: 0; right: 0; padding: 0; text-align: center; bottom: 70px; font-size: 21vw; }
+      .hero-card { position: relative; margin: -56px auto 0; padding: 28px 24px; }
+      .sec-head { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .who-for { padding: 80px 0; }
+      .who-grid { grid-template-columns: 1fr; max-width: 520px; }
+      .who-card { aspect-ratio: 4 / 3.4; }
+      .band .wrap { min-height: 0; padding-top: 80px; padding-bottom: 56px; gap: 48px; }
+      .steps { grid-template-columns: 1fr; gap: 8px; }
+      .services { padding: 72px 0; }
+      .services .wrap { grid-template-columns: 1fr; gap: 32px; }
+      .services .intro, .faq .intro { position: static; }
+      .svc-grid .svc:nth-child(even) { margin-top: 0; }
+      .split { grid-template-columns: minmax(0, 1fr); }
+      .split .txt { padding: 60px 24px; }
+      .split .media { min-height: 360px; }
+      .split.rev .stat-tile { order: -1; }
+      .t-track { grid-auto-columns: 82%; }
+      .plan .wrap { grid-template-columns: 1fr; padding-top: 80px; padding-bottom: 96px; gap: 64px; }
+      .faq { padding: 80px 0; }
+      .faq .wrap { grid-template-columns: 1fr; gap: 28px; }
+      footer .wrap { grid-template-columns: 1fr; }
+      .mobile-cta { display: flex; }
+      .pal-btn { bottom: 82px; left: 12px; }
+      .pal { left: 12px; right: 12px; width: auto; bottom: 136px; max-height: calc(100svh - 170px); }
     }
-    .field {
-      width: 100%; padding: 13px 16px; border-radius: 16px; font: inherit; color: var(--text);
-      background: rgba(255,255,255,.08); border: 1px solid var(--border); outline: none;
+    @media (max-width: 560px) {
+      .wrap { padding: 0 16px; }
+      .mobile-menu { padding: 10px 16px 18px; }
+      .hero-photo { height: 420px; }
+      .svc-grid { grid-template-columns: 1fr; }
+      .svc { min-height: 300px; }
+      .logo small { display: none; }
+      .phone { width: 250px; height: 520px; }
+      .chip { right: -18px; } .chip-2 { left: -22px; }
     }
-    .field:focus { border-color: var(--accent); }
-    .field::placeholder { color: rgba(244,247,255,.45); }
-    .booking .btn { width: 100%; margin-top: 22px; }
-    .fine { text-align: center; font-size: .8rem; color: var(--muted); margin-top: 10px; }
-
-    /* Secciones */
-    section { padding: 48px 0; }
-    .section-title { font-size: clamp(1.6rem, 4vw, 2.4rem); letter-spacing: -.02em; margin-bottom: 24px; }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .card { padding: 26px; }
-    .card .ico { font-size: 1.8rem; margin-bottom: 10px; }
-    .card h3 { margin-bottom: 6px; }
-    .card p { color: var(--muted); font-size: .95rem; }
-
-    .steps { counter-reset: s; }
-    .steps .card::before {
-      counter-increment: s; content: counter(s);
-      display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%;
-      background: var(--accent); color: #06121a; font-weight: 800; margin-bottom: 12px;
-    }
-
-    .cta-final { text-align: center; padding: 48px 24px; }
-    .cta-final p { color: var(--muted); margin: 10px 0 24px; }
-
-    footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 40px 0 120px; }
-
-    /* Barra fija de agenda en móvil */
-    .sticky-cta {
-      display: none; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 20;
-      padding: 10px; border-radius: 999px; align-items: center; justify-content: space-between; gap: 10px;
-    }
-    .sticky-cta span { padding-left: 12px; font-size: .9rem; font-weight: 600; }
-
-    @media (max-width: 860px) {
-      .hero { grid-template-columns: 1fr; padding-top: 40px; }
-      .grid { grid-template-columns: 1fr; }
-      .sticky-cta { display: flex; }
-      nav .btn { display: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .js .reveal { opacity: 1; transform: none; }
+      .steps article::before { width: 64px; }
     }
   </style>
 </head>
 <body>
-  <div class="blobs"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
 
-  <nav class="glass">
-    <div class="logo">Checho<span>Kine</span></div>
-    <a href="#agendar" class="btn sm">Agendar hora</a>
+  <!-- Isotipo de Sergio Trigo: sello "ST." (petróleo, arena y punto cobre) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="isotipo" viewBox="0 0 32 32">
+      <rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="#0F3D3E"/>
+      <g fill="none" stroke="#EADCC8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.2 11.1c-.7-1.5-2.1-2.3-3.9-2.3-2.2 0-3.8 1.3-3.8 3.1 0 4.3 8 2.4 8 7 0 2-1.8 3.4-4.1 3.4-1.9 0-3.4-.9-4.1-2.4"/>
+        <path d="M17.5 8.8H26M21.75 8.8v14.4"/>
+      </g>
+      <circle cx="26" cy="23.2" r="1.3" fill="#C6601F"/>
+    </symbol>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="logo" href="#inicio" aria-label="Sergio Trigo, inicio">
+        <svg class="mark"><use href="#isotipo"/></svg>
+        <span><b>Sergio Trigo</b><small>Kinesiólogo deportivo</small></span>
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <a href="#para-quien" data-nav="para-quien">Para quién</a>
+        <a href="#evaluacion" data-nav="evaluacion">Evaluación</a>
+        <a href="#tratamientos" data-nav="tratamientos">Tratamientos</a>
+        <a href="#sobre-mi" data-nav="sobre-mi resultados">Sobre mí</a>
+        <a href="#plan-online" data-nav="plan-online">Plan online</a>
+        <a href="#preguntas" data-nav="preguntas">Preguntas</a>
+      </nav>
+      <div class="nav-right">
+        <a class="pill" href="#agendar" data-nav="agendar">Agendar evaluación</a>
+        <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h12M3 12h12"/></svg>
+        </button>
+      </div>
+    </div>
+    <span class="progress" aria-hidden="true"></span>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Principal (móvil)">
+      <a href="#para-quien" data-nav="para-quien">Para quién</a>
+      <a href="#evaluacion" data-nav="evaluacion">Evaluación</a>
+      <a href="#tratamientos" data-nav="tratamientos">Tratamientos</a>
+      <a href="#sobre-mi" data-nav="sobre-mi resultados">Sobre mí</a>
+      <a href="#plan-online" data-nav="plan-online">Plan online</a>
+      <a href="#preguntas" data-nav="preguntas">Preguntas</a>
+      <a class="pill solid" href="#agendar">Agendar evaluación</a>
+    </nav>
+  </header>
+
+  <!-- Índice lateral: muestra en qué parte del recorrido vas -->
+  <nav class="side-index" aria-label="Secciones">
+    <a href="#inicio" data-nav="inicio" class="active"><i></i><b>Inicio</b></a>
+    <a href="#para-quien" data-nav="para-quien"><i></i><b>Para quién</b></a>
+    <a href="#evaluacion" data-nav="evaluacion"><i></i><b>Evaluación</b></a>
+    <a href="#tratamientos" data-nav="tratamientos"><i></i><b>Tratamientos</b></a>
+    <a href="#sobre-mi" data-nav="sobre-mi"><i></i><b>Soy Sergio</b></a>
+    <a href="#resultados" data-nav="resultados"><i></i><b>Resultados</b></a>
+    <a href="#plan-online" data-nav="plan-online"><i></i><b>Plan online</b></a>
+    <a href="#preguntas" data-nav="preguntas"><i></i><b>Preguntas</b></a>
+    <a href="#agendar" data-nav="agendar"><i></i><b>Agendar</b></a>
   </nav>
 
-  <main class="wrap">
-    <!-- HERO + AGENDA -->
-    <div class="hero">
-      <div>
-        <div class="pill glass">⚡ Horas disponibles esta semana</div>
-        <h1>Vuelve a entrenar <em>sin dolor</em>, más rápido.</h1>
-        <p class="lead">Kinesiología deportiva para lesiones, prevención y rendimiento. Evaluación en tu primera sesión y un plan pensado para tu deporte.</p>
-        <a href="#agendar" class="btn">Agenda en 30 segundos →</a>
-        <div class="proof">
-          <div><strong>+1.200</strong><small>deportistas atendidos</small></div>
-          <div><strong>4.9 ★</strong><small>valoración promedio</small></div>
-          <div><strong>24 h</strong><small>para tu primera hora</small></div>
+  <main>
+    <!-- 1. HERO -->
+    <section class="hero" id="inicio" data-section="inicio">
+      <div class="hero-photo">
+        <!-- MOCKUP → foto de Sergio, fondo oscuro, brazos cruzados -->
+        <img class="cover" src="img/mockups/hero-retrato.jpg" alt="Sergio Trigo, kinesiólogo, de brazos cruzados" fetchpriority="high">
+        <div class="giant" aria-hidden="true">sergio<br>trigo</div>
+      </div>
+      <div class="wrap">
+        <div class="hero-card">
+          <span class="eyebrow">Kine trauma deportivo · TMO · Fisioterapia invasiva</span>
+          <h1>Entrena<br>sin dolor.</h1>
+          <p>Ayudo a deportistas de combate, runners y gymrats a volver a entrenar sin dolor, con un plan claro desde la primera evaluación.</p>
+          <div class="hero-actions">
+            <a class="pill solid wa" href="#" data-msg="Hola Sergio, quiero agendar una evaluación.">Agendar por WhatsApp</a>
+            <a class="pill" href="#evaluacion">Cómo funciona</a>
+          </div>
+          <div class="proof"><span class="dot"></span><span><b>+100 pacientes</b> atendidos · <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Hernando+de+Aguirre+162,+Providencia,+Chile" target="_blank" rel="noopener">Av. Hernando de Aguirre 162, Providencia</a></span></div>
         </div>
       </div>
+    </section>
 
-      <form id="agendar" class="booking glass" onsubmit="agendar(event)">
-        <h2>Reserva tu hora</h2>
-        <p>Tres pasos y listo. Te confirmamos por WhatsApp.</p>
-
-        <div class="label">1 · ¿Qué necesitas?</div>
-        <div class="chips">
-          <label class="chip"><input type="radio" name="servicio" value="Lesión" checked><span>🩹 Lesión</span></label>
-          <label class="chip"><input type="radio" name="servicio" value="Prevención"><span>🛡️ Prevención</span></label>
-          <label class="chip"><input type="radio" name="servicio" value="Rendimiento"><span>🚀 Rendimiento</span></label>
-          <label class="chip"><input type="radio" name="servicio" value="Post-operatorio"><span>🏥 Post-op</span></label>
+    <!-- 2. ¿PARA QUIÉN ES? -->
+    <section class="who-for" id="para-quien" data-section="para-quien">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="reveal">
+            <span class="eyebrow">Para quién</span>
+            <h2 class="h2">¿Para quién es?</h2>
+          </div>
         </div>
-
-        <div class="label">2 · ¿Cuándo?</div>
-        <div class="chips" id="dias"></div>
-        <div class="chips" style="margin-top:8px">
-          <label class="chip"><input type="radio" name="bloque" value="Mañana" checked><span>☀️ Mañana</span></label>
-          <label class="chip"><input type="radio" name="bloque" value="Tarde"><span>🌤️ Tarde</span></label>
-          <label class="chip"><input type="radio" name="bloque" value="Noche"><span>🌙 Noche</span></label>
+        <div class="who-grid">
+          <article class="who-card reveal" style="--d:0">
+            <img class="cover" src="img/mockups/feature-box.jpg" alt="Boxeadores entrenando con paletas" loading="lazy" style="object-position:30% 40%">
+            <div class="over"><span class="n">01</span><h3>Deportistas de combate</h3><p>Boxeo, MMA, jiu-jitsu. Lesiones de hombro, rodilla y columna sin parar de entrenar más de lo necesario.</p></div>
+          </article>
+          <article class="who-card reveal" style="--d:1">
+            <img class="cover" src="img/mockups/svc-reintegro.jpg" alt="Runner corriendo en un parque" loading="lazy" style="object-position:50% 35%">
+            <div class="over"><span class="n">02</span><h3>Runners</h3><p>Dolor de rodilla, tendones y sobrecarga. Volver a correr con técnica y carga bien dosificadas.</p></div>
+          </article>
+          <article class="who-card reveal" style="--d:2">
+            <img class="cover" src="img/mockups/svc-fuerza.jpg" alt="Persona haciendo sentadilla con barra" loading="lazy" style="object-position:55% 40%">
+            <div class="over"><span class="n">03</span><h3>Gymrats</h3><p>Dolor lumbar, hombro, codo. Ajustar tu entrenamiento en vez de dejarlo.</p></div>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <div class="label">3 · Tus datos</div>
-        <input class="field" name="nombre" placeholder="Tu nombre" required>
+    <!-- 3. TU PRIMERA EVALUACIÓN -->
+    <section class="band on-dark" id="evaluacion" data-section="evaluacion">
+      <!-- MOCKUP → foto de Sergio entrenando boxeo o con un peleador (horizontal, fondo oscuro) -->
+      <img class="bg flip" data-parallax src="img/mockups/evaluacion-boxeo.jpg" alt="" loading="lazy">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow reveal">Tu primera evaluación</span>
+          <h2 class="reveal" style="--d:1">30 minutos. <em>Sales con diagnóstico y un plan.</em></h2>
+          <a class="pill reveal wa" style="--d:2" href="#" data-msg="Hola Sergio, quiero agendar una evaluación.">Agendar evaluación</a>
+        </div>
+        <div class="steps">
+          <article class="reveal" style="--d:0"><span class="n">01</span><h3>Evaluamos</h3><p>Historia, test de movimiento y fuerza. Entiendo qué te duele y por qué.</p></article>
+          <article class="reveal" style="--d:1"><span class="n">02</span><h3>Tratamos</h3><p>Terapia manual, fisioterapia invasiva si corresponde y primeras indicaciones.</p></article>
+          <article class="reveal" style="--d:2"><span class="n">03</span><h3>Planificamos</h3><p>Plan de sesiones y de entrenamiento para que vuelvas a tu deporte.</p></article>
+        </div>
+      </div>
+    </section>
 
-        <button class="btn" type="submit">Confirmar por WhatsApp</button>
-        <div class="fine">Sin pago previo · Cancela gratis hasta 12 h antes</div>
-      </form>
+    <!-- 4. TRATAMIENTOS -->
+    <section class="services" id="tratamientos" data-section="tratamientos">
+      <div class="giant" data-drift="1" aria-hidden="true">tratamientos</div>
+      <div class="wrap">
+        <div class="intro">
+          <span class="eyebrow reveal">Tratamientos</span>
+          <h2 class="h2 reveal" style="--d:1">Cómo te puedo<br>ayudar</h2>
+          <p class="reveal" style="--d:2">Terapia manual ortopédica, fisioterapia invasiva y ejercicio, según lo que necesite tu lesión.</p>
+          <a class="pill reveal" style="--d:3" href="#agendar">Agendar evaluación</a>
+        </div>
+        <div class="svc-grid">
+          <a class="svc reveal" style="--d:0" href="#agendar">
+            <img class="cover" src="img/mockups/trat-kinesiologia.jpg" alt="" loading="lazy" style="object-position:60% 40%">
+            <div class="over"><h3>Kinesiología deportiva</h3><p>Evaluación, rehabilitación y readaptación al deporte.</p><span class="arrow-btn">→</span></div>
+          </a>
+          <a class="svc reveal" style="--d:1" href="#agendar">
+            <img class="cover" src="img/mockups/svc-puncion.jpg" alt="" loading="lazy" style="object-position:40% 50%">
+            <div class="over"><h3>Punción seca</h3><p>Terapia basada en evidencia para dolor muscular y puntos gatillo.</p><span class="arrow-btn">→</span></div>
+          </a>
+          <a class="svc reveal" style="--d:0" href="#agendar">
+            <img class="cover" src="img/mockups/trat-mep.jpg" alt="" loading="lazy" style="object-position:50% 45%">
+            <!-- PENDIENTE: confirmar con Sergio la descripción de MEP -->
+            <div class="over"><h3>MEP</h3><p>Microelectrólisis percutánea: <span class="todo">[breve descripción en palabras simples]</span></p><span class="arrow-btn">→</span></div>
+          </a>
+          <a class="svc reveal" style="--d:1" href="#agendar">
+            <img class="cover" src="img/mockups/svc-terapia-manual.jpg" alt="" loading="lazy" style="object-position:50% 40%">
+            <div class="over"><h3>Masaje deportivo</h3><p>Descarga y recuperación para entrenar y competir mejor.</p><span class="arrow-btn">→</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deportes en movimiento -->
+    <div class="marquee" data-section="tratamientos" role="img" aria-label="Deportes: boxeo, MMA, jiu-jitsu, muay thai, running, CrossFit y gym">
+      <div class="track" aria-hidden="true">
+        <span>Boxeo</span><span>MMA</span><span>Jiu-jitsu</span><span>Muay thai</span><span>Running</span><span>CrossFit</span><span>Gym</span>
+        <span>Boxeo</span><span>MMA</span><span>Jiu-jitsu</span><span>Muay thai</span><span>Running</span><span>CrossFit</span><span>Gym</span>
+      </div>
     </div>
 
-    <!-- SERVICIOS -->
-    <section>
-      <h2 class="section-title">¿En qué te ayudamos?</h2>
-      <div class="grid">
-        <div class="card glass"><div class="ico">🦵</div><h3>Recuperación de lesiones</h3><p>Esguinces, desgarros, tendinopatías y dolor articular. Volver a la cancha con seguridad.</p></div>
-        <div class="card glass"><div class="ico">🏃</div><h3>Prevención</h3><p>Evaluación de movimiento y fuerza para detectar riesgos antes de que se transformen en lesión.</p></div>
-        <div class="card glass"><div class="ico">📈</div><h3>Rendimiento</h3><p>Movilidad, fuerza y readaptación para que rindas al máximo en tu deporte.</p></div>
+    <!-- 5. SOY SERGIO -->
+    <section class="split" id="sobre-mi" data-section="sobre-mi">
+      <div class="media">
+        <!-- MOCKUP → foto de Sergio trabajando con un paciente -->
+        <img class="cover" src="img/mockups/sobre-mi-atencion.jpg" alt="Sergio trabajando el hombro de una paciente en la camilla" loading="lazy" style="object-position:50% 30%">
+      </div>
+      <div class="txt on-dark">
+        <span class="eyebrow reveal">Sobre mí</span>
+        <h2 class="reveal" style="--d:1">Soy Sergio</h2>
+        <p class="reveal" style="--d:2">Kinesiólogo trauma deportivo. <span class="todo">[Formación, años de experiencia y qué te diferencia]</span>. Trabajo con deportistas que no quieren elegir entre entrenar y estar sanos.</p>
+        <p class="creds reveal" style="--d:3"><span class="todo">[Universidad · Certificaciones]</span></p>
+        <a class="pill reveal" style="--d:4" href="https://www.instagram.com/chechokine_/" target="_blank" rel="noopener">Sígueme en Instagram</a>
+      </div>
+    </section>
+    <section class="split rev" data-section="sobre-mi">
+      <div class="txt alt">
+        <span class="eyebrow reveal">Mi forma de trabajar</span>
+        <p class="quote reveal" style="--d:1">“No te doy el alta por calendario. Te la doy cuando estás listo.”</p>
+        <p class="reveal" style="--d:2">Reintegro por fases, con test de fuerza antes del alta.</p>
+      </div>
+      <div class="media stat-tile">
+        <img class="cover" src="img/mockups/santiago-atardecer.jpg" alt="Atardecer en Santiago con la Gran Torre y la cordillera" loading="lazy" style="object-position:30% 50%">
+        <div class="num"><span data-count="100">+100</span><small>Pacientes atendidos · Av. Hernando de Aguirre 162, Providencia</small></div>
       </div>
     </section>
 
-    <!-- CÓMO FUNCIONA -->
-    <section>
-      <h2 class="section-title">Así de simple</h2>
-      <div class="grid steps">
-        <div class="card glass"><h3>Agenda</h3><p>Elige servicio y horario. Te toma menos de un minuto.</p></div>
-        <div class="card glass"><h3>Evaluación</h3><p>En la primera sesión revisamos tu lesión, tu deporte y tus objetivos.</p></div>
-        <div class="card glass"><h3>Tu plan</h3><p>Tratamiento y ejercicios a tu medida, con seguimiento en cada sesión.</p></div>
+    <!-- 6. RESULTADOS REALES -->
+    <section class="testi" id="resultados" data-section="resultados">
+      <div class="giant" data-drift="-1" aria-hidden="true">resultados</div>
+      <div class="wrap" data-carousel>
+        <div class="sec-head">
+          <div class="reveal">
+            <span class="eyebrow">Resultados reales</span>
+            <h2 class="h2">Volvieron a entrenar sin dolor</h2>
+          </div>
+          <div class="car-btns reveal" style="--d:1">
+            <button type="button" class="prev" aria-label="Testimonio anterior">←</button>
+            <button type="button" class="next" aria-label="Testimonio siguiente">→</button>
+          </div>
+        </div>
+        <div class="t-track">
+          <article class="tcard reveal" style="--d:0"><h3>¡De vuelta al ring!</h3><p>“Llegué con el hombro que no me dejaba hacer sparring. En unas semanas estaba entrenando de nuevo y entendiendo qué me pasaba.”</p><div class="who"><img src="img/mockups/avatar-2.jpg" alt="" loading="lazy"><div><b>Matías R.</b><small>Boxeo</small></div></div></article>
+          <article class="tcard reveal" style="--d:1"><h3>Volví a correr</h3><p>“Me dolía la rodilla siempre al km 8. Me armó un plan de fuerza y terminé mi primera media maratón de Santiago sin dolor.”</p><div class="who"><img src="img/mockups/avatar-1.jpg" alt="" loading="lazy"><div><b>Camila S.</b><small>Running</small></div></div></article>
+          <article class="tcard reveal" style="--d:2"><h3>Sentadillas sin miedo</h3><p>“Con la punción seca y los ejercicios se me fue el dolor lumbar. Volví a subir pesos con más técnica que antes.”</p><div class="who"><img src="img/mockups/avatar-3.jpg" alt="" loading="lazy"><div><b>Felipe A.</b><small>Gym</small></div></div></article>
+          <article class="tcard"><h3>Rodilla a prueba</h3><p>“Después de la cirugía de ligamento tenía miedo de volver. Me hizo test de fuerza antes de darme el alta y volví segura al tatami.”</p><div class="who"><img src="img/mockups/avatar-4.jpg" alt="" loading="lazy"><div><b>Javiera M.</b><small>Jiu-jitsu</small></div></div></article>
+          <article class="tcard"><h3>Sin dolor de hombro</h3><p>“Entrenaba MMA con dolor hace meses. Me explicó todo, me dio ejercicios para la casa y en la tercera sesión ya notaba el cambio.”</p><div class="who"><img src="img/mockups/avatar-5.jpg" alt="" loading="lazy"><div><b>Diego P.</b><small>MMA</small></div></div></article>
+        </div>
+        <div class="car-bar" aria-hidden="true"><i></i></div>
+        <p class="sample">Testimonios de ejemplo: se reemplazan por testimonios reales (nombre y deporte) con permiso del paciente.</p>
       </div>
     </section>
 
-    <!-- CTA FINAL -->
-    <section>
-      <div class="cta-final glass">
-        <h2 class="section-title" style="margin:0">¿Listo para volver a moverte?</h2>
-        <p>Tu primera hora puede ser mañana mismo.</p>
-        <a href="#agendar" class="btn">Agendar mi hora</a>
+    <!-- 7. PLAN ONLINE -->
+    <section class="plan on-dark" id="plan-online" data-section="plan-online">
+      <div class="wrap">
+        <div>
+          <span class="tagline reveal">100% online</span>
+          <h2 class="reveal" style="--d:1">Plan de entrenamiento sin dolor</h2>
+          <p class="reveal" style="--d:2"><span class="todo">[Para quién · duración · qué incluye]</span></p>
+          <p class="reveal" style="--d:2">Sigue entrenando con un plan hecho por un kinesiólogo.</p>
+          <ul>
+            <li class="reveal" style="--d:3">Rutinas en la app, adaptadas a tu dolor</li>
+            <li class="reveal" style="--d:4">Chequeo semanal conmigo</li>
+            <li class="reveal" style="--d:5">Ajustes según cómo vas avanzando</li>
+          </ul>
+          <a class="pill solid reveal wa" style="--d:5" href="#" data-msg="Hola Sergio, quiero información del plan de entrenamiento online.">Quiero el plan online</a>
+        </div>
+        <!-- MOCKUP → captura de la app con la rutina -->
+        <div class="phone-wrap reveal" style="--d:2" aria-label="Ejemplo de rutina en la app" role="img">
+          <div class="phone">
+            <div class="screen">
+              <div class="top"><span>Semana 3 · Día 2</span><span>12:40</span></div>
+              <h4>Fuerza tren inferior</h4>
+              <div class="bar"><i></i></div>
+              <div class="ex done"><span class="ck">✓</span><div><b>Sentadilla búlgara</b><small>3 × 10 · 12 kg</small></div></div>
+              <div class="ex done"><span class="ck">✓</span><div><b>Peso muerto rumano</b><small>3 × 8 · 30 kg</small></div></div>
+              <div class="ex"><span class="ck"></span><div><b>Puente de glúteo</b><small>3 × 12</small></div></div>
+              <div class="ex"><span class="ck"></span><div><b>Isométrico de cuádriceps</b><small>4 × 30 s</small></div></div>
+              <div class="check"><span class="av" style="background:none"><svg width="30" height="30"><use href="#isotipo"/></svg></span><div><b style="font-weight:500">Chequeo semanal</b><br><small style="opacity:.8">Viernes con Sergio</small></div></div>
+            </div>
+          </div>
+          <div class="chip"><small>Dolor al correr</small><b>6 → 2 /10</b></div>
+          <div class="chip chip-2"><small>Esta semana</small><b>3 de 4 días</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. PREGUNTAS FRECUENTES -->
+    <section class="faq" id="preguntas" data-section="preguntas">
+      <div class="wrap">
+        <div class="intro">
+          <span class="eyebrow reveal">Preguntas</span>
+          <h2 class="h2 reveal" style="--d:1">Preguntas<br>frecuentes</h2>
+          <p class="reveal" style="--d:2">¿Tienes otra duda? <a class="wa" href="#" data-msg="Hola Sergio, tengo una pregunta.">Escríbeme por WhatsApp</a>.</p>
+        </div>
+        <div class="reveal" style="--d:1">
+          <details open><summary>¿Cuánto cuesta la evaluación?</summary><p><span class="todo">[Precio]</span></p></details>
+          <details><summary>¿Cuántas sesiones necesito?</summary><p>Depende de tu lesión. En la evaluación te doy un plan con un número estimado de sesiones.</p></details>
+          <details><summary>¿Tengo que dejar de entrenar?</summary><p>En la mayoría de los casos no. Ajustamos tu entrenamiento.</p></details>
+          <details><summary>¿Dónde atiendes y en qué horarios?</summary><p><a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Hernando+de+Aguirre+162,+Providencia,+Chile" target="_blank" rel="noopener">Av. Hernando de Aguirre 162, Oficina 301, Providencia, Región Metropolitana</a> (ver en Google Maps).<br>Horarios: <span class="todo">[Horarios]</span></p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CIERRE: AGENDAR -->
+    <section class="book on-dark" id="agendar" data-section="agendar">
+      <img class="bg" data-parallax src="img/mockups/santiago-noche.jpg" alt="" loading="lazy">
+      <div class="giant" data-drift="1" aria-hidden="true">agenda</div>
+      <div class="inner wrap">
+        <span class="eyebrow reveal">Agenda tu evaluación</span>
+        <h2 class="reveal" style="--d:1">Vuelve a entrenar<br>sin dolor</h2>
+        <p class="lead reveal" style="--d:2">Escríbeme por WhatsApp y agendamos tu evaluación.</p>
+        <form class="reveal" style="--d:3" onsubmit="agendar(event)">
+          <select name="zona" aria-label="¿Qué te duele?">
+            <option value="la rodilla">Me duele la rodilla</option>
+            <option value="el hombro">Me duele el hombro</option>
+            <option value="la espalda">Me duele la espalda</option>
+            <option value="el tobillo">Me duele el tobillo</option>
+            <option value="la cadera">Me duele la cadera</option>
+            <option value="el codo">Me duele el codo</option>
+            <option value="otra zona">Otra zona</option>
+          </select>
+          <input name="nombre" placeholder="Tu nombre" autocomplete="given-name" required aria-label="Tu nombre">
+          <button class="pill" type="submit">Agendar por WhatsApp →</button>
+        </form>
+        <p class="fine"><a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Hernando+de+Aguirre+162,+Providencia,+Chile" target="_blank" rel="noopener">Av. Hernando de Aguirre 162, Oficina 301, Providencia, Región Metropolitana</a><br>Respondo yo, no un bot.</p>
       </div>
     </section>
   </main>
 
-  <footer>© Checho Kine · Kinesiología Deportiva</footer>
+  <footer data-section="agendar">
+    <div class="wrap">
+      <div>
+        <div class="logo"><svg class="mark"><use href="#isotipo"/></svg><span><b>Sergio Trigo</b><small>Kinesiólogo · Kine trauma deportivo</small></span></div>
+        <p>Entrena sin dolor, con un plan claro desde la primera evaluación.</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul><li><a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Hernando+de+Aguirre+162,+Providencia,+Chile" target="_blank" rel="noopener">Av. Hernando de Aguirre 162, Oficina 301, Providencia, Región Metropolitana</a></li><li>WhatsApp: <span class="wa-num">+56 9 XXXX XXXX</span></li><li><a href="https://www.instagram.com/chechokine_/" target="_blank" rel="noopener">Instagram @chechokine_</a></li></ul>
+      </div>
+      <div>
+        <h4>Tratamientos</h4>
+        <ul><li>Kinesiología deportiva</li><li>Punción seca</li><li>MEP</li><li>Masaje deportivo</li><li>Plan de entrenamiento online</li></ul>
+      </div>
+      <div class="copy"><span>© Sergio Trigo · Kinesiólogo</span><span>kinetraumadeportivo.cl</span></div>
+    </div>
+  </footer>
 
-  <div class="sticky-cta glass">
-    <span>Horas desde mañana</span>
-    <a href="#agendar" class="btn sm">Agendar</a>
+  <div class="mobile-cta"><span>Sergio Trigo · Kinesiólogo</span><a class="pill solid wa" href="#" data-msg="Hola Sergio, quiero agendar una evaluación.">Agendar</a></div>
+
+  <!-- Herramienta de paleta: aparece al abrir el archivo en tu computador o con ?paleta en la URL -->
+  <button class="pal-btn" type="button" aria-expanded="false" aria-controls="pal"><span class="sw"><i style="background:var(--bg)"></i><i style="background:var(--panel)"></i><i style="background:var(--primary)"></i><i style="background:var(--accent)"></i></span>Paleta</button>
+  <div class="pal" id="pal" role="dialog" aria-label="Probar colores">
+    <h4>Probar colores</h4>
+    <p class="hint">Solo con los 6 colores de la marca. Elige una combinación o asigna un color a cada parte. Se guarda solo en tu navegador.</p>
+    <div class="presets"></div>
+    <div class="rows"></div>
+    <div class="acts"><button type="button" class="reset">Restablecer</button><button type="button" class="main copy">Copiar colores</button></div>
   </div>
 
   <script>
-    // Número de WhatsApp de la clínica (reemplazar por el real, formato internacional sin +)
+    // WhatsApp de Sergio (formato internacional, sin +). Reemplazar por el real.
     const WHATSAPP = "56900000000";
-
-    // Genera los próximos 5 días hábiles como opciones
-    const dias = document.getElementById("dias");
-    const nombres = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
-    let d = new Date(), n = 0;
-    while (n < 5) {
-      d.setDate(d.getDate() + 1);
-      if (d.getDay() === 0) continue;
-      const txt = `${nombres[d.getDay()]} ${d.getDate()}`;
-      dias.insertAdjacentHTML("beforeend",
-        `<label class="chip"><input type="radio" name="dia" value="${txt}" ${n === 0 ? "checked" : ""}><span>${txt}</span></label>`);
-      n++;
-    }
+    const waLink = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+    document.querySelectorAll(".wa").forEach(a => { a.href = waLink(a.dataset.msg || "Hola Sergio, quiero agendar una evaluación."); a.target = "_blank"; a.rel = "noopener"; });
 
     function agendar(e) {
       e.preventDefault();
       const f = new FormData(e.target);
-      const msg = `Hola! Soy ${f.get("nombre")}. Quiero agendar una hora de ${f.get("servicio")} para el ${f.get("dia")} en la ${f.get("bloque").toLowerCase()}.`;
-      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
+      window.open(waLink(`Hola Sergio, soy ${f.get("nombre")}. Me duele ${f.get("zona")} y quiero agendar una evaluación.`), "_blank");
     }
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // ——— Aparición de bloques al hacer scroll ———
+    const io = new IntersectionObserver(entries => entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+    }), { rootMargin: "0px 0px -10% 0px", threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+    // ——— Menú e índice lateral: resaltan la sección que estás viendo ———
+    const links = document.querySelectorAll("[data-nav]");
+    const blocks = [...document.querySelectorAll("[data-section]")];
+    let lockUntil = 0;
+    function setActive(key) {
+      links.forEach(a => {
+        const on = a.dataset.nav.split(" ").includes(key);
+        a.classList.toggle("active", on);
+        on ? a.setAttribute("aria-current", "true") : a.removeAttribute("aria-current");
+      });
+    }
+    function updateNav() {
+      if (Date.now() < lockUntil) return;
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) return setActive("agendar");
+      const line = window.innerHeight * 0.4;
+      let current = blocks[0].dataset.section;
+      for (const b of blocks) { if (b.getBoundingClientRect().top <= line) current = b.dataset.section; }
+      setActive(current);
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener("click", () => {
+      const target = a.getAttribute("href").slice(1);
+      const sec = document.getElementById(target);
+      if (sec && sec.dataset.section) { setActive(sec.dataset.section); lockUntil = Date.now() + 1000; setTimeout(updateNav, 1050); }
+      closeMenu();
+    }));
+    window.addEventListener("scrollend", () => { lockUntil = 0; updateNav(); });
+
+    // ——— Movimiento ligado al scroll ———
+    const bar = document.querySelector(".progress");
+    const giants = [...document.querySelectorAll(".giant[data-drift]")];
+    const parallax = [...document.querySelectorAll("[data-parallax]")];
+    let ticking = false;
+    function onFrame() {
+      ticking = false;
+      const vh = window.innerHeight;
+      const max = document.documentElement.scrollHeight - vh;
+      bar.style.transform = `scaleX(${max > 0 ? Math.min(window.scrollY / max, 1) : 0})`;
+      updateNav();
+      if (reduce) return;
+      for (const g of giants) {
+        const r = g.getBoundingClientRect();
+        if (r.bottom < -100 || r.top > vh + 100) continue;
+        const p = (r.top + r.height / 2 - vh / 2) / vh;
+        g.style.transform = `translate3d(${p * 8 * g.dataset.drift}vw,0,0)`;
+      }
+      for (const img of parallax) {
+        const r = img.parentElement.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) continue;
+        const p = (r.top + r.height / 2 - vh / 2) / (vh + r.height);
+        img.style.transform = `translate3d(0,${p * -22}%,0)` + (img.classList.contains("flip") ? " scaleX(-1)" : "");
+      }
+    }
+    function requestFrame() { if (!ticking) { ticking = true; requestAnimationFrame(onFrame); } }
+    window.addEventListener("scroll", requestFrame, { passive: true });
+    window.addEventListener("resize", requestFrame);
+    onFrame();
+
+    // ——— Contador "+100" ———
+    document.querySelectorAll("[data-count]").forEach(el => {
+      if (reduce) return;
+      const target = +el.dataset.count;
+      const obs = new IntersectionObserver(([en]) => {
+        if (!en.isIntersecting) return;
+        obs.disconnect();
+        const t0 = performance.now();
+        const step = now => {
+          const k = Math.min((now - t0) / 1400, 1);
+          el.textContent = "+" + Math.round(target * (1 - Math.pow(1 - k, 3)));
+          if (k < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      }, { threshold: .5 });
+      obs.observe(el);
+    });
+
+    // ——— Carrusel de testimonios ———
+    document.querySelectorAll("[data-carousel]").forEach(root => {
+      const track = root.querySelector(".t-track");
+      const prev = root.querySelector(".prev"), next = root.querySelector(".next");
+      const thumb = root.querySelector(".car-bar i");
+      const card = () => track.querySelector(".tcard").getBoundingClientRect().width + 20;
+      prev.onclick = () => track.scrollBy({ left: -card(), behavior: "smooth" });
+      next.onclick = () => track.scrollBy({ left: card(), behavior: "smooth" });
+      const sync = () => {
+        const max = track.scrollWidth - track.clientWidth;
+        const vis = track.clientWidth / track.scrollWidth;
+        thumb.style.width = vis * 100 + "%";
+        thumb.style.left = (max > 0 ? track.scrollLeft / max : 0) * (100 - vis * 100) + "%";
+        prev.disabled = track.scrollLeft < 4;
+        next.disabled = track.scrollLeft > max - 4;
+      };
+      track.addEventListener("scroll", sync, { passive: true });
+      window.addEventListener("resize", sync);
+      sync();
+    });
+
+    // ——— Menú en celular ———
+    const burger = document.querySelector(".burger");
+    const mobileMenu = document.getElementById("mobile-menu");
+    function closeMenu() { mobileMenu.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); }
+    burger.addEventListener("click", () => {
+      const open = mobileMenu.classList.toggle("open");
+      burger.setAttribute("aria-expanded", String(open));
+    });
+
+    // ——— Herramienta de paleta (solo con los 6 colores de la marca) ———
+    (function () {
+      const show = location.protocol === "file:" || /[?&#]paleta/.test(location.href);
+      if (!show) return;
+      document.body.classList.add("show-pal");
+      const root = document.documentElement;
+      const BRAND = { "#0A0F14": "Negro azulado", "#0F3D3E": "Petróleo", "#2E6F73": "Verde azulado", "#7FB3B8": "Celeste agua", "#EADCC8": "Arena", "#C6601F": "Cobre" };
+      const FIELDS = [
+        ["bg", "Fondo"], ["surface", "Tarjetas"], ["text", "Texto"],
+        ["panel", "Panel"], ["panel-2", "Panel 2"], ["on-panel", "Texto en panel"],
+        ["primary", "Botón principal"], ["on-primary", "Texto del botón"], ["accent", "Detalles y palabras gigantes"], ["g1", "Degradado"]
+      ];
+      const PRESETS = {
+        "Noche andina": { bg: "#0A0F14", surface: "#0F3D3E", text: "#EADCC8", panel: "#0F3D3E", "panel-2": "#2E6F73", "on-panel": "#EADCC8", primary: "#C6601F", "on-primary": "#0A0F14", accent: "#7FB3B8", g1: "#0F3D3E" },
+        "Petróleo": { bg: "#0F3D3E", surface: "#2E6F73", text: "#EADCC8", panel: "#0A0F14", "panel-2": "#2E6F73", "on-panel": "#EADCC8", primary: "#C6601F", "on-primary": "#0A0F14", accent: "#7FB3B8", g1: "#2E6F73" },
+        "Arena": { bg: "#EADCC8", surface: "#EADCC8", text: "#0A0F14", panel: "#0F3D3E", "panel-2": "#2E6F73", "on-panel": "#EADCC8", primary: "#0F3D3E", "on-primary": "#EADCC8", accent: "#2E6F73", g1: "#7FB3B8" },
+        "Contraste": { bg: "#EADCC8", surface: "#EADCC8", text: "#0A0F14", panel: "#0A0F14", "panel-2": "#0F3D3E", "on-panel": "#EADCC8", primary: "#C6601F", "on-primary": "#0A0F14", accent: "#C6601F", g1: "#7FB3B8" }
+      };
+      const DEFAULT = "Noche andina";
+      const btn = document.querySelector(".pal-btn"), pal = document.getElementById("pal");
+      const presetBox = pal.querySelector(".presets"), rows = pal.querySelector(".rows");
+      let state = { name: DEFAULT, vars: null };
+      try { state = JSON.parse(localStorage.getItem("st-paleta")) || state; } catch (e) {}
+      const current = k => getComputedStyle(root).getPropertyValue("--" + k).trim().toUpperCase();
+      const save = () => { try { localStorage.setItem("st-paleta", JSON.stringify(state)); } catch (e) {} };
+
+      function apply() {
+        FIELDS.forEach(([k]) => root.style.removeProperty("--" + k));
+        if (state.vars) for (const k in state.vars) root.style.setProperty("--" + k, state.vars[k]);
+        presetBox.querySelectorAll("button").forEach(b => b.classList.toggle("on", b.dataset.name === state.name));
+        rows.querySelectorAll("select").forEach(s => { s.value = current(s.name); s.previousElementSibling.style.background = s.value; });
+        save();
+      }
+      for (const name in PRESETS) {
+        const p = PRESETS[name];
+        const b = document.createElement("button");
+        b.type = "button"; b.dataset.name = name;
+        b.innerHTML = `<span class="dots">${[p.bg, p.panel, p.primary, p.accent].map(c => `<i style="background:${c}"></i>`).join("")}</span>${name}`;
+        b.onclick = () => { state = { name, vars: name === DEFAULT ? null : { ...p } }; apply(); };
+        presetBox.appendChild(b);
+      }
+      FIELDS.forEach(([k, label]) => {
+        const l = document.createElement("label");
+        l.innerHTML = `<span>${label}</span><i style="width:18px;height:18px;border-radius:50%;border:1px solid var(--line);flex:none"></i><select name="${k}">${Object.entries(BRAND).map(([hex, n]) => `<option value="${hex}">${n}</option>`).join("")}</select>`;
+        const sel = l.querySelector("select");
+        sel.addEventListener("change", () => {
+          if (!state.vars) state.vars = Object.fromEntries(FIELDS.map(([f]) => [f, current(f)]));
+          state.vars[k] = sel.value; state.name = "Personalizada";
+          root.style.setProperty("--" + k, sel.value);
+          sel.previousElementSibling.style.background = sel.value;
+          presetBox.querySelectorAll("button").forEach(b => b.classList.remove("on"));
+          save();
+        });
+        rows.appendChild(l);
+      });
+      btn.onclick = () => { const o = pal.classList.toggle("open"); btn.setAttribute("aria-expanded", String(o)); apply(); };
+      pal.querySelector(".reset").onclick = () => { state = { name: DEFAULT, vars: null }; apply(); };
+      pal.querySelector(".copy").onclick = e => {
+        const txt = `Paleta "${state.name}":\n` + FIELDS.map(([k, label]) => `${label}: ${BRAND[current(k)] || ""} ${current(k)}`).join("\n");
+        const done = () => { e.target.textContent = "¡Copiado!"; setTimeout(() => e.target.textContent = "Copiar colores", 1600); };
+        (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(done, () => window.prompt("Copia estos colores:", txt));
+      };
+      apply();
+    })();
   </script>
 </body>
 </html>
