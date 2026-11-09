@@ -133,7 +133,7 @@
     .hero { position: relative; background: var(--grad); overflow: hidden; }
     .hero .wrap { position: relative; z-index: 2; display: flex; align-items: center; min-height: clamp(600px, calc(100svh - 72px), 900px); padding-top: 48px; padding-bottom: 100px; }
     .hero-photo { position: absolute; z-index: 1; top: 0; right: 0; bottom: 0; width: 60%; }
-    .hero-photo img { object-position: 50% 18%; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 34%); mask-image: linear-gradient(90deg, transparent 0%, #000 34%); animation: heroIn 1.6s var(--ease) both; }
+    .hero-photo img { object-position: 50% 18%; filter: grayscale(1) contrast(1.12) brightness(.8);-webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 34%); mask-image: linear-gradient(90deg, transparent 0%, #000 34%); animation: heroIn 1.6s var(--ease) both; }
     .hero-photo .giant { position: absolute; right: 0; bottom: 0; width: auto; text-align: right; padding: 0 72px .2em 0; line-height: .86; font-size: clamp(4.5rem, 10vw, 9.5rem); background: var(--giant-light); -webkit-background-clip: text; background-clip: text; animation: rise 1.4s .25s var(--ease) both; }
     .hero-card { width: min(480px, 100%); background: var(--surface-glass); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid var(--line); padding: 38px 36px 32px; animation: rise 1.1s .1s var(--ease) both; }
     .hero-card h1 { font-size: clamp(3rem, 5.6vw, 4.8rem); font-weight: 500; letter-spacing: -.045em; line-height: .95; margin: 18px 0 20px; }
@@ -474,8 +474,8 @@
     <!-- 1. HERO -->
     <section class="hero" id="inicio" data-section="inicio">
       <div class="hero-photo">
-        <!-- MOCKUP → foto de Sergio, fondo oscuro, brazos cruzados -->
-        <img class="cover" src="img/mockups/hero-retrato.jpg" alt="Sergio Trigo, kinesiólogo, de brazos cruzados" fetchpriority="high">
+        <!-- Foto real de Sergio (480×600, pedir el original en alta resolución). Se pasa a blanco y negro con CSS, como el retrato anterior -->
+        <img class="cover" src="img/sergio-hero.jpg" alt="Sergio Trigo, kinesiólogo, sonriendo de brazos cruzados en el gimnasio" fetchpriority="high">
         <div class="giant" aria-hidden="true">sergio<br>trigo</div>
       </div>
       <div class="wrap">
